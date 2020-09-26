@@ -1,0 +1,91 @@
+// filemanager
+// --------------------------------------------------
+
+.filemanager
+	
+	&_path
+		margin-bottom: 20px
+		padding: 10px
+		background-color: $grey-lighten-3
+
+	&_tree
+
+		.tree
+			display: none
+			margin-top: 10px
+
+			ul
+				list-style-type: none
+				padding-left: 15px
+				border-left: 1px solid #e0e0e0
+				margin-left: 8px
+
+				li
+					text-decoration: none
+					line-height: 16px
+					margin: 6px 0
+
+					&.ext-file
+						padding-left: 0
+						margin-left: -5px
+
+						&:before
+							margin-left: -11px
+							content: "\2014"
+							position: absolute
+							color: #e0e0e0
+
+					&:before
+						margin-left: -16px
+						content: "\2014"
+						position: absolute
+						color: #e0e0e0
+
+			div
+				cursor: pointer
+				border-radius: 2px
+				transition: .2s
+				display: inline-block
+				line-height: 19px
+
+				&.selected
+					background: rgba(179,229,252,0.54)
+
+	&_container
+	
+		.folder
+			cursor: pointer
+		
+		.fileicon
+			font-size: 18px
+
+	.closed .fa-folder:before
+		content: "\f07b"
+
+	.open .fa-folder:before
+		content: "\f07c"
+
+.uploadfile
+	height: 24px
+	width: 24px
+	line-height: 21px
+	padding: 0
+	position: relative
+
+	&_input
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		width: 24px
+		height: 24px
+		cursor: pointer
+		border: 0
+		outline: 0
+		outline: none
+		font-size: 1px
+		background: #203747
+		margin: 0
+		pointer-events: auto
+		line-height: 21px
+		padding: 0 0 0 24px

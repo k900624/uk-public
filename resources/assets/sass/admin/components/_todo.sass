@@ -1,0 +1,50 @@
+// todo
+// --------------------------------------------------
+
+.todo
+	
+	//&-list
+
+	&-items
+		margin-bottom: 20px
+
+	&-item
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		&.strike
+
+			.todo-item-title
+				text-decoration: line-through
+				color: #ccc
+
+		&-title
+			font-family: RobotoRegular
+
+		.checkbox
+			margin-top: 6px
+			margin-bottom: 6px
+
+		&-action-remove
+			cursor: pointer
+			font-size: 16px
+			padding: 5px
+
+	&-add-action
+		padding-top: 0
+		padding-bottom: 0
+		line-height: 1
+		border-bottom: 0
+		border-right: 0
+		border-top: 0
+		font-size: 25px
+		color: $accent-primary
+
+		&:hover,
+		&:focus,
+		&:active,
+		&:active:focus
+			outline: none
+			background: none
+			color: darken($accent-primary, 20%)

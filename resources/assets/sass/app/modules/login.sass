@@ -1,0 +1,99 @@
+// 
+// @author SillexLab (sillexlab@gmail.com)
+// @copyright 2020
+// 
+// login styles
+
+@import "../vars"
+@import "../mixins"
+@import "../../grid"
+@import "../../admin/vars"
+@import "../../admin/bootstrap_custom"
+
+
+body
+	background-color: #e7e7ef
+
+.container-login
+	left: 0
+	top: 30%
+	position: absolute
+	width: 100%
+
+.block
+	margin: 0 auto
+	width: 360px
+
+	&-inner
+		position: relative
+		padding: 15px 30px 50px
+		background-color: #fff
+		text-align: center
+		box-shadow: 0 2px 4px rgba(0,0,0,.1)
+	
+	&_header
+		margin-bottom: 15px
+
+		h2
+			margin: 0
+			font-size: 16px
+
+.to-site
+	position: absolute
+	left: 30px
+	bottom: 5px
+	font-size: 12px
+
+.alert
+	border-radius: 0
+	padding: 8px 15px
+	margin-bottom: 15px
+
+	p
+		font-size: 11px
+
+.form-group
+	position: relative
+
+	label
+		position: absolute
+		top: 9px
+		left: 12px
+		margin: 0
+		padding-right: 24px
+		pointer-events: none
+		color: #666
+		transition: .2s ease all
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		font-weight: 300
+	
+	.form-control
+		height: 40px
+		padding: 10px 12px 0
+		border: none
+		border-bottom: 1px solid #ccc
+		color: #666
+		
+		&:focus
+			border-bottom: 1px solid $accent-color
+
+			& + label
+				color: $accent-color
+
+		&:focus + label,
+		&:valid + label
+			top: 2px
+			font-size: 11px
+			font-weight: 700
+
+		&:-webkit-autofill + label // Отдельно для хрома, ff не нравится
+			top: 2px
+			font-size: 11px
+			font-weight: 700
+
+.btn
+	width: 100%
+	padding: 10px 12px
+	font-size: 14px

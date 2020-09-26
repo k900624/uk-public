@@ -1,0 +1,92 @@
+// page
+// --------------------------------------------------
+
+.page
+	// +row()
+	+shift-left(2)
+	+shift-right(2)
+	flex-direction: column
+	
+	+media-md-block
+		+shift-left(1)
+		+shift-right(1)
+
+	+media-sm-block
+		+shift-left(0)
+		+shift-right(0)
+
+	+media-sm-block
+		margin-right: 0
+		margin-left: 0
+
+	.section_name
+		margin: 40px 0
+
+.contacts
+	+row()
+
+	&-form
+		+col(8)
+		+col-sm(7)
+		+col-xs(12)
+		order: 1
+		
+		+media-xs-block
+			order: 1
+
+	&-list
+		+col(4)
+		+col-sm(5)
+		+col-xs(12)
+		order: 2
+		display: flex
+		flex-direction: column
+
+		.contact
+			display: flex
+			align-items: center
+			margin-bottom: 20px
+
+			&_icon
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-basis: 44px
+				flex-shrink: 0
+				width: 44px
+				height: 44px
+				margin-right: 10px
+				// background-color: $accent-color
+				background-color: #fff
+				border: 2px solid #999
+				border-radius: 50%
+				color: #999
+
+				i
+					font-size: 20px
+
+			&-text
+				
+				&_header
+					margin: 0
+					color: #888
+					font-size: 11px
+					text-transform: uppercase
+					font-family: RobotoRegular, sans-serif, arial, verdana, Lucida Sans
+
+				&_link
+					font-size: 16px
+					color: inherit
+
+					&:hover
+						color: $accent-color
+
+.feedback
+	
+	&-form
+		
+		.captcha_form
+			
+			.captcha_img,
+			.captcha_input
+				+col(6)

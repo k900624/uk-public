@@ -1,0 +1,406 @@
+//
+// @author SillexLab (sillexlab@gmail.com)
+// @copyright 2020
+// 
+// mygrid v.0.11.1
+
+
+*, *:before, *:after
+	box-sizing: border-box
+
+
+// Media
+// --------------------------------------------------
+=media-lg-block()
+	@media screen and (max-width: $screen-desktop)
+		@content
+
+=media-md-block()
+	@media screen and (max-width: $screen-tablet)
+		@content
+
+=media-sm-block()
+	@media screen and (max-width: $screen-tablet-min)
+		@content
+
+=media-xs-block()
+	@media screen and (max-width: $screen-phone)
+		@content
+
+=media-xxs-block()
+	@media screen and (max-width: $screen-phone-min)
+		@content
+
+=media-lg($name, $value)
+	+media-lg-block()
+		#{$name}: $value
+
+=media-md($name, $value)
+	+media-md-block()
+		#{$name}: $value
+
+=media-sm($name, $value)
+	+media-sm-block()
+		#{$name}: $value
+
+=media-xs($name, $value)
+	+media-xs-block()
+		#{$name}: $value
+
+=media-xxs($name, $value)
+	+media-xxs-block()
+		#{$name}: $value
+
+=media-from($min_width)
+	@media screen and (min-width: $min_width)
+		@content
+
+=media-to($max_width)
+	@media screen and (max-width: $max_width)
+		@content
+
+=media-between($min_width, $max_width)
+	@media screen and (min-width: $min_width) and (max-width: $max_width)
+		@content
+
+=media-print
+	@media print
+		@content
+
+
+// Wrapper
+// --------------------------------------------------
+=wrapper()
+	max-width: $max-width
+	min-width: 320px
+	margin-left: auto
+	margin-right: auto
+	padding-left:  $gutter
+	padding-right: $gutter
+
+	+media-lg-block()
+		padding-left: $gutter
+		padding-right: $gutter
+
+	+media-md-block()
+		padding-left: $gutter
+		padding-right: $gutter
+
+	+media-sm-block()
+		padding-left: $gutter / 2
+		padding-right: $gutter / 2
+
+	+media-xs-block()
+		padding-left: $gutter / 2
+		padding-right: $gutter / 2
+
+	+media-xxs-block()
+		padding-left: $gutter / 2
+		padding-right: $gutter / 2
+
+
+// Creates a wrapper for a series of columns
+// --------------------------------------------------
+
+=row-offsets()
+	margin-left: ($gutter / -2)
+	margin-right: ($gutter / -2)
+
+=col-offsets($type)
+	#{$type}-left: ($gutter / 2)
+	#{$type}-right: ($gutter / 2)
+
+
+// All normal browsers
+=row()
+	display: flex
+	flex-wrap: wrap
+	+row-offsets()
+
+=col($columns, $calc: true)
+	$val: 100% / $grid-columns * $columns
+	word-wrap: break-word
+
+	@if ($calc == true)
+		+col-offsets(margin)
+		width: #{calc(#{$val} - #{$gutter})}
+	@else
+		+col-offsets(padding)
+		width: percentage(($columns / $grid-columns))
+
+
+// Inline-block
+=row-ib()
+	+row-offsets()
+	font-size: 0
+
+=col-ib($columns, $calc: true)
+	$val: 100% / $grid-columns * $columns
+	display: inline-block
+	vertical-align: top
+	word-wrap: break-word
+
+	@if ($calc == true)
+		+col-offsets(margin)
+		width: #{calc(#{$val} - #{$gutter})}
+	@else
+		+col-offsets(padding)
+		width: percentage(($columns / $grid-columns))
+
+
+// IE < 11, Opera mini (~ bootstrap 3)
+=row-float()
+	+row-offsets()
+	+clearfix()
+
+=col-float($columns, $calc: true)
+	$val: 100% / $grid-columns * $columns
+	float: left
+	word-wrap: break-word
+
+	@if ($calc == true)
+		+col-offsets(margin)
+		width: #{calc(#{$val} - #{$gutter})}
+	@else
+		+col-offsets(padding)
+		width: percentage(($columns / $grid-columns))
+
+
+// Offsets
+// --------------------------------------------------
+
+=shift($columns)
+	@if ($columns > 0)
+		margin-left: percentage(($columns / $grid-columns))
+		margin-right: percentage(($columns / $grid-columns))
+	@else
+		+col-offsets(margin)
+
+=shift-left($columns)
+	@if ($columns > 0)
+		margin-left: percentage(($columns / $grid-columns))
+	@else
+		margin-left: ($gutter / 2)
+
+=shift-right($columns)
+	@if ($columns > 0)
+		margin-right: percentage(($columns / $grid-columns))
+	@else
+		margin-right: ($gutter / 2)
+
+
+// Generate the large columns
+// --------------------------------------------------
+=col-lg($columns, $calc: true)
+
+	+media-lg-block()
+		$val: 100% / $grid-columns * $columns
+		@if ($calc == true)
+			width: #{calc(#{$val} - #{$gutter})}
+		@else
+			width: percentage(($columns / $grid-columns))
+
+=shift-lg($columns)
+	@if ($columns > 0)
+		+media-lg-block()
+			margin-left: percentage(($columns / $grid-columns))
+			margin-right: percentage(($columns / $grid-columns))
+	@else
+		+media-lg-block()
+			+col-offsets(margin)
+
+=shift-lg-left($columns)
+	@if ($columns > 0)
+		+media-lg-block()
+			margin-left: percentage(($columns / $grid-columns))
+	@else
+		+media-lg-block()
+			margin-left: ($gutter / 2)
+
+=shift-lg-right($columns)
+	@if ($columns > 0)
+		+media-lg-block()
+			margin-right: percentage(($columns / $grid-columns))
+	@else
+		+media-lg-block()
+			margin-right: ($gutter / 2)
+
+
+// Generate the medium columns
+// --------------------------------------------------
+=col-md($columns, $calc: true)
+
+	+media-md-block()
+		$val: 100% / $grid-columns * $columns
+		@if ($calc == true)
+			width: #{calc(#{$val} - #{$gutter})}
+		@else
+			width: percentage(($columns / $grid-columns))
+
+=shift-md($columns)
+	@if ($columns > 0)
+		+media-md-block()
+			margin-left: percentage(($columns / $grid-columns))
+			margin-right: percentage(($columns / $grid-columns))
+	@else
+		+media-md-block()
+			+col-offsets(margin)
+
+=shift-md-left($columns)
+	@if ($columns > 0)
+		+media-md-block()
+			margin-left: percentage(($columns / $grid-columns))
+	@else
+		+media-md-block()
+			margin-left: ($gutter / 2)
+
+=shift-md-right($columns)
+	@if ($columns > 0)
+		+media-md-block()
+			margin-right: percentage(($columns / $grid-columns))
+	@else
+		+media-md-block()
+			margin-right: ($gutter / 2)
+
+
+// Generate the small columns
+// --------------------------------------------------
+=col-sm($columns, $calc: true)
+
+	+media-sm-block()
+		$val: 100% / $grid-columns * $columns
+		@if ($calc == true)
+			width: #{calc(#{$val} - #{$gutter})}
+		@else
+			width: percentage(($columns / $grid-columns))
+
+=shift-sm($columns)
+	@if ($columns > 0)
+		+media-sm-block()
+			margin-left: percentage(($columns / $grid-columns))
+			margin-right: percentage(($columns / $grid-columns))
+	@else
+		+media-sm-block()
+			+col-offsets(margin)
+
+=shift-sm-left($columns)
+	@if ($columns > 0)
+		+media-sm-block()
+			margin-left: percentage(($columns / $grid-columns))
+	@else
+		+media-sm-block()
+			margin-left: ($gutter / 2)
+
+=shift-sm-right($columns)
+	@if ($columns > 0)
+		+media-sm-block()
+			margin-right: percentage(($columns / $grid-columns))
+	@else
+		+media-sm-block()
+			margin-right: ($gutter / 2)
+
+// Generate the extra small columns
+// --------------------------------------------------
+=col-xs($columns, $calc: true)
+
+	+media-xs-block()
+		$val: 100% / $grid-columns * $columns
+		@if ($calc == true)
+			width: #{calc(#{$val} - #{$gutter})}
+		@else
+			width: percentage(($columns / $grid-columns))
+
+=shift-xs($columns)
+	@if ($columns > 0)
+		+media-xs-block()
+			margin-left: percentage(($columns / $grid-columns))
+			margin-right: percentage(($columns / $grid-columns))
+	@else
+		+media-xs-block()
+			+col-offsets(margin)
+
+=shift-xs-left($columns)
+	@if ($columns > 0)
+		+media-xs-block()
+			margin-left: percentage(($columns / $grid-columns))
+	@else
+		+media-xs-block()
+			margin-left: ($gutter / 2)
+
+=shift-xs-right($columns)
+	@if ($columns > 0)
+		+media-xs-block()
+			margin-right: percentage(($columns / $grid-columns))
+	@else
+		+media-xs-block()
+			margin-right: ($gutter / 2)
+
+
+// Generate the extra extra small columns
+// --------------------------------------------------
+=col-xxs($columns, $calc: true)
+
+	+media-xxs-block()
+		$val: 100% / $grid-columns * $columns
+		@if ($calc == true)
+			width: #{calc(#{$val} - #{$gutter})}
+		@else
+			width: percentage(($columns / $grid-columns))
+
+=shift-xxs($columns)
+	@if ($columns > 0)
+		+media-xxs-block()
+			margin-left: percentage(($columns / $grid-columns))
+			margin-right: percentage(($columns / $grid-columns))
+	@else
+		+media-xxs-block()
+			+col-offsets(margin)
+
+=shift-xxs-left($columns)
+	@if ($columns > 0)
+		+media-xxs-block()
+			margin-left: percentage(($columns / $grid-columns))
+	@else
+		+media-xxs-block()
+			margin-left: ($gutter / 2)
+
+=shift-xxs-right($columns)
+	@if ($columns > 0)
+		+media-xxs-block()
+			margin-right: percentage(($columns / $grid-columns))
+	@else
+		+media-xxs-block()
+			margin-right: ($gutter / 2)
+
+
+// debug
+// --------------------------------------------------
+=debug($background: rgba(115, 150, 255, 0.1) , $outline: 1px solid rgba(115, 150, 255, 0.5))
+	height: 100vh
+	position: fixed
+	width: 100%
+	
+	> div
+		height: inherit
+		+wrapper()
+		
+		> div
+			height: inherit
+			+row()
+			
+			> div
+				+col(1)
+				height: inherit
+				outline: $outline
+				background: $background
+
+
+// classes
+// --------------------------------------------------
+
+// @each $name, $px in $breakpoints
+// 	@for $i from 1 through $grid-columns
+// 		.col-#{$name}-#{$i}
+// 			+row()
+
+		// +col-$name($i)

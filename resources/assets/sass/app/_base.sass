@@ -1,0 +1,303 @@
+//
+// @author SillexLab (sillexlab@gmail.com)
+// @copyright 2020
+//
+// base styles
+
+
+html,
+body
+	height: 100%
+	font-size: $global-font-size
+	user-select: none
+
+	// Для работы mixin rem, напр. rem(20)
+	+media-md-block()
+		font-size: 13px
+
+	+media-sm-block()
+		font-size: 13px
+
+	+media-xs-block()
+		font-size: 12px
+
+	+media-xxs-block()
+		font-size: 11px
+
+
+body
+	line-height: 1.5
+	margin: 0
+	min-width: 320px
+	color: $text-color
+	text-align: left
+	font-family: $global-font-family
+	background-color: $background-color
+	cursor: default
+	-webkit-font-smoothing: antialiased
+
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection rule sets have to be separate.
+// Customize the background color to match your design.
+
+::-moz-selection
+	background: #b3d4fc
+	text-shadow: none
+
+::selection
+	background: #b3d4fc
+	text-shadow: none
+
+*::-webkit-input-placeholder
+	color: lighten($text-color, 10%)
+	opacity: 1
+
+*:-moz-placeholder
+	color: lighten($text-color, 10%)
+	opacity: 1
+
+*::-moz-placeholder
+	color: lighten($text-color, 10%)
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: lighten($text-color, 10%)
+	opacity: 1
+
+
+// A better looking default horizontal rule
+hr
+	display: block
+	height: 1px
+	border: 0
+	border-top: 1px solid #ccc
+	margin: 1em 0
+	padding: 0
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	margin: 10px 0
+	font-weight: normal
+	font-family: $headers-font-family
+
+a
+	color: $link-color
+	transition: color 0.2s
+	// text-decoration: none
+
+	&:focus
+		outline: 0
+
+	&:hover,
+	&:active,
+	&:focus
+		text-decoration: none
+
+	&:not([class])
+		color: $link-color
+		// text-decoration: none
+		text-decoration: underline
+		cursor: pointer
+
+		&:hover,
+		&:active,
+		&:focus
+			color: $link-color
+			text-decoration: none
+
+// Remove the gap between images, videos, audio and canvas and the bottom of
+// their containers: h5bp.com/i/440
+
+audio,
+canvas,
+img,
+svg,
+iframe,
+video
+	vertical-align: middle
+	max-width: 100%
+
+
+// Remove default fieldset styles.
+fieldset
+	border: 0
+	margin: 0
+	padding: 0
+
+th,
+strong,
+label
+	font-family: "RobotoBold", sans-serif, arial, verdana, Lucida Sans
+
+// Allow only vertical resizing of textareas.
+textarea
+	min-height: 32px
+	resize: vertical
+
+ul
+	padding: 0
+	// margin: 0
+	list-style: none
+
+
+// Чтоб не "ломали" межстрочный интервал
+// Фикс для тега sup
+sup
+	vertical-align: baseline
+	position: relative
+	top: -0.4em
+// Фикс для тега sub
+sub
+	vertical-align: baseline
+	position: relative
+	bottom: -0.4em
+
+
+// Убираем кнопки-стрелки у поля type="number"
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button
+	appearance: none
+	margin: 0
+
+
+// buttons
+.btn
+	display: inline-block
+	min-width: 100px
+	height: 30px
+	margin-bottom: 0
+	padding: 6px 12px
+	font-weight: 400
+	text-align: center
+	white-space: nowrap
+	vertical-align: middle
+	cursor: pointer
+	background-image: none
+	border: 1px solid transparent
+	color: $text-color
+	font-size: $global-font-size
+	line-height: 16px
+	border-radius: 2px
+	text-decoration: none
+	user-select: none
+
+	&:focus,
+	&:active,
+	&:focus:active
+		box-shadow: none
+		outline: 0
+
+	&:disabled,
+	&.disabled
+		cursor: not-allowed
+
+	&-inverse,
+	&-success,
+	&-info,
+	&-secondary,
+	&-danger,
+	&-primary,
+		color: #fff
+
+		&:hover,
+		&:focus
+			color: #fff
+
+	&-secondary
+		background-color: $secondary
+		border-color: $secondary
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: darken($secondary, 7.5%)
+			border-color: darken($secondary, 10%)
+
+	&-success
+		background-color: $success
+		border-color: $success
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: darken($success, 7.5%)
+			border-color: darken($success, 10%)
+
+	&-info
+		background-color: $info
+		border-color: $info
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: darken($info, 7.5%)
+			border-color: darken($info, 10%)
+
+	&-warning
+		background-color: $warning
+		border-color: $warning
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: darken($warning, 7.5%)
+			border-color: darken($warning, 10%)
+
+	&-danger
+		background-color: $danger
+		border-color: $danger
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: darken($danger, 7.5%)
+			border-color: darken($danger, 10%)
+
+	&-primary
+		background-color: $primary
+		border-color: $primary
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: darken($primary, 7.5%)
+			border-color: darken($primary, 10%)
+
+	&-link
+		color: $primary
+		background-color: transparent !important
+		border-color: transparent !important
+
+		&:hover
+			text-decoration: underline !important
+
+		&.btn-success,
+		&.btn-success:hover
+			color: $success
+
+		&.btn-info,
+		&.btn-info:hover
+			color: $info
+
+		&.btn-warning,
+		&.btn-warning:hover
+			color: $warning
+
+		&.btn-danger,
+		&.btn-danger:hover
+			color: $danger
+
+		&.btn-primary,
+		&.btn-primary:hover
+			color: $primary

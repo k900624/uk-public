@@ -1,0 +1,241 @@
+// sidebar
+// --------------------------------------------------
+
+.l-sidebar
+	position: relative
+	bottom: 0
+	top: 0
+	margin-top: $header-height
+	flex: 0 0 250px
+	transform: translateX(0)
+	background-color: #333639
+	z-index: 98
+	transition: all .3s ease-in-out
+
+	&.is_hidden
+		position: absolute
+		transform: translateX(-($sidebar-left-width))
+
+.sidebar
+	padding: 0
+	color: #fff
+	min-height: 270px
+	display: flex
+	flex-direction: column
+	height: 100%
+
+	&-wrap
+		position: relative
+		margin-bottom: 20px
+		padding: 10px
+	
+	&-nav
+		margin: 0
+		padding: 0
+		
+		&-item
+			position: relative
+			margin: 0
+			list-style: none
+			border: none
+			border-radius: 0
+			box-shadow: none
+			background-color: inherit
+
+			&--avatar
+				margin-bottom: 20px
+				padding: 8px 10px
+				border-bottom: 1px solid #636567
+
+				img
+					float: left
+					margin-right: 5px
+
+			&.active
+				background-color: #4e5256
+
+			&_username
+				margin-top: 6px
+				color: #fff
+
+			&_username-group
+				color: #ccc
+
+		&-link
+			display: block
+			padding: 8px 10px
+			color: #c7c7c7 !important
+			text-decoration: none
+			transition: all .3s ease-in-out
+			
+			&:hover,
+			&:focus
+				color: inherit
+				background-color: #4e5256
+			
+			.fa:first-child
+				min-width: 18px
+				font-size: 16px
+				margin-right: 10px
+
+			.fa:last-child
+				margin-top: 3px
+	
+	&-subnav
+		margin: 0
+		padding: 0
+		background-color: #4e5256
+
+		&-item
+			display: flex
+			position: relative
+			list-style: none
+			border-left: 3px solid transparent
+			transition: all .3s ease-in-out
+
+			&.active
+				color: inherit
+				background-color: #64696f
+				border-left: 3px solid $accent-warning
+
+				.sidebar-subnav-settings
+					opacity: 1
+
+			&:hover,
+			&:focus
+				color: inherit
+				background-color: #64696f
+				outline: none
+
+				.sidebar-subnav-settings
+					opacity: 1
+					transition: opacity .4s .1s ease, background-color .4s ease
+		
+		&-link
+			display: block
+			width: 85%
+			padding: 8px 16px
+			color: #c7c7c7 !important
+			text-decoration: none
+
+		&-settings
+			width: 15%
+			opacity: 0
+			text-align: center
+			font-size: 16px
+			line-height: 32px
+
+			.fa
+				color: #ccc
+
+			&:hover
+				background-color: #74777b
+
+				.fa
+					color: #fff
+
+	&_footer
+		margin-top: auto
+		padding: 20px 0
+		width: 100%
+		border-top: 1px solid #484A4D
+		text-align: center
+		background-color: #333639
+	
+	.collapsed
+
+		.fa:last-child
+			transition: .5s
+			transform: rotate(-90deg)
+
+
+@media only screen and (max-width : 991px)
+	.l-sidebar
+		flex-basis: 200px
+
+		.sidebar-nav-link
+			display: flex!important
+			align-items: center!important
+
+			.fa.pull-right
+				position: absolute
+				right: 10px
+
+@media only screen and (max-width : 767px)
+
+	.settings-block,
+	.l-sidebar
+		position: fixed
+		width: 50%
+		transition: margin-left 0.25s, margin-right 0.25s, width 0.25s, flex 0.25s, -ms-flex 0.25s
+
+		.sidebar-nav-link,
+		.sidebar-subnav-link
+			font-size: 12px
+
+	.settings-block
+		right: 0
+		bottom: 0
+		top: 0
+		margin-top: 50px
+		margin-right: -50%
+		flex: 0 0 250px
+		transform: translateX(0)
+		background-color: #fff
+		border-top: 1px solid #c8ced3
+		z-index: 99
+
+		.settings-list
+			display: flex
+			flex-direction: column
+
+		.settings-link
+			display: block
+			padding: 10px 20px
+			background-color: #f0f3f5
+			color: #73818f
+			text-transform: uppercase
+			text-align: center
+			font-size: 12px
+			font-family: "RobotoBold", sans-serif, arial, verdana, Lucida Sans
+
+		.settings-sublist
+
+			.settings-link
+				background-color: #fff
+				color: #73818f
+				text-transform: capitalize
+				text-align: left
+				font-family: sans-serif, arial, verdana, Lucida Sans
+
+	.l-sidebar
+		left: 0
+		margin-left: -50%
+
+	.sidebar-show .l-sidebar
+		margin-left: 0
+
+	.settings-show .l-content::before,
+	.sidebar-show .l-content::before
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 89
+		width: 100%
+		height: 100%
+		content: ""
+		background: rgba(0, 0, 0, 0.7)
+		animation: opacity 0.25s
+
+	.settings-show .settings-block
+		margin-right: 0
+
+@media only screen and (max-width : 479px)
+	.settings-block,
+	.l-sidebar
+		width: 70%
+
+	.l-sidebar
+		margin-left: -70%
+	.settings-block
+		margin-right: -70%

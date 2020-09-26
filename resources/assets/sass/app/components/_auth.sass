@@ -1,0 +1,116 @@
+// auth
+// --------------------------------------------------
+
+.auth-login-ajax
+
+	&_form
+		// padding: 0
+
+		.ajax-buttons
+			justify-content: space-between
+
+		.btn
+			min-width: 100px
+
+	&_forgot-password
+		font-size: 11px
+
+	&_social
+		display: flex
+		justify-content: space-between
+		padding: 10px
+		background-color: #f2f2f2
+
+		&-icon
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 22px
+			color: $text-color
+			width: 40px
+			height: 40px
+			border-radius: 50%
+			border: 1px solid $text-color
+
+			&--twitter:hover
+				color: $twitter
+				border-color: $twitter
+			&--vkontakte:hover
+				color: $vk
+				border-color: $vk
+			&--odnoklassniki:hover
+				color: $odnoklassniki
+				border-color: $odnoklassniki
+			&--facebook:hover
+				color: $facebook
+				border-color: $facebook
+
+.auth-register-ajax
+
+	//&_form
+		// padding: 0
+
+		// .text-muted
+		// 	text-align: center
+		// 	margin-bottom: 0.5rem
+
+	&_buttons
+		text-align: center
+
+.auth-forgot-password-ajax
+
+	&_form
+		padding: 0
+
+.auth-login
+	
+	&_form
+		+row()
+
+	&-form-block
+		+col(5)
+		+shift-right(1)
+
+	&-register-block
+		+col(6)
+		display: flex
+		flex-direction: column
+
+	&_buttons
+		display: flex
+		justify-content: space-between
+
+	&-register_buttons
+		margin-top: auto
+		margin-bottom: 0
+
+.form-group
+	position: relative
+
+.form-control-icon
+	padding-right: 40px
+
+.form-control-icon ~ [class*="icon-"]
+	position: absolute
+	z-index: 2
+	color: #444
+	display: block
+	width: 12px
+	height: 18px
+	right: 16px
+	top: 15px
+	opacity: 0.5
+	transform: translate(0, -50%)
+	transition: opacity 0.4s ease
+
+.form-control-icon ~ .icon-unlock,
+.form-control-icon ~ .icon-lock
+	cursor: pointer
+	font-size: 16px
+	width: 14px
+	height: 22px
+
+.form-control-icon ~ .icon-unlock:hover,
+.form-control-icon ~ .icon-lock:hover,
+.form-control-icon:focus ~ [class*="icon-"]
+	opacity: 1

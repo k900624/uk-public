@@ -1,0 +1,68 @@
+// header
+// --------------------------------------------------
+
+.header
+	display: flex
+	padding: 10px 0
+	justify-content: space-between
+
+	&_logo
+		position: relative
+		width: 50px
+		flex: 0 0 50px
+
+		.logo
+			margin: 4px 0
+
+			&_link,
+			&_link:hover
+				text-decoration: none
+				font-weight: normal
+				color: #777
+				font-size: 26px
+
+	&_adv
+		width: 500px
+		flex: 0 0 500px
+		margin-left: 12px
+		margin-right: 12px
+
+		+media-md-block
+			display: none
+
+	&_nav
+
+		.nav-links
+			margin: 0
+			padding: 0
+
+			&_item
+				display: inline-block
+				margin-left: 10px
+
+				.dropdown-menu
+					right: 0
+					left: auto
+					min-width: 14rem
+
+				.user
+					position: relative
+
+					&_link
+						color: inherit
+						display: block
+
+						&:focus,
+						&:hover
+							text-decoration: none
+
+					&_avatar
+						width: 32px
+
+				.auth
+
+					&_link
+						margin-left: 10px
+
+		+media-md-block
+			display: none

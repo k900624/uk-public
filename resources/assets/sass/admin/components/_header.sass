@@ -1,0 +1,199 @@
+// header
+// --------------------------------------------------
+
+.l-header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 99
+	height: $header-height
+	padding: 0 30px 0 15px
+	background-color: #fff
+	box-shadow: 0 2px 4px rgba(0,0,0,.1)
+
+.header
+	
+	&_logo
+		line-height: 50px
+		margin: 0
+	
+	&_nav
+		line-height: $header-height
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		.nav
+
+			&_list
+				display: flex
+				margin-bottom: 0
+
+		.dropdown-menu
+			width: 200px
+			margin-top: 6px
+			padding: 0
+
+			&_item
+
+				&--avatar
+					margin: 5px 0
+					line-height: 30px
+
+					.user_avatar
+						width: 30px
+						margin-right: 5px
+
+			&--big
+				width: 280px
+
+			&:after
+				content: ''
+				display: inline-block
+				border-left: 6px solid transparent
+				border-right: 6px solid transparent
+				border-bottom: 6px solid #fff
+				position: absolute
+				top: -6px
+				right: 20px
+			
+			&.animated
+				animation-duration: .5s
+			
+			@keyframes fadeInDown
+				0%
+					opacity: 0
+					transform: translateY(-10px)
+				
+				100%
+					opacity: 1
+					transform: translateY(0)
+
+			>li
+				
+				a
+					padding: 6px 20px
+
+				.menu
+					max-height: 230px
+					margin: 0
+					padding: 0
+					list-style: none
+					overflow-x: hidden
+					line-height: initial
+
+					>li
+
+						>a
+							// margin: 0 0 5px
+							padding: 10px
+							display: block
+							white-space: nowrap
+							border-bottom: 1px solid #f7f7f7
+							// background-color: #f7f7f7
+
+							&:hover
+								background: #f4f4f4
+								text-decoration: none
+							img
+								margin: auto 10px auto auto
+								width: 40px
+								height: 40px
+							>h4
+								padding: 0
+								margin: 0 0 5px
+								height: 14px
+								color: #444
+								font-size: 13px
+								position: relative
+
+								small
+									color: #999
+									font-size: 10px
+									position: absolute
+									top: 0
+									right: 0
+							p
+								margin: 0
+								overflow: hidden
+								font-size: 11px
+								color: #666
+				
+				&.footer
+					
+					>a
+						border-top-left-radius: 0
+						border-top-right-radius: 0
+						border-bottom-right-radius: 4px
+						border-bottom-left-radius: 4px
+						font-size: 12px
+						background-color: #fff
+						padding: 7px 10px
+						border-bottom: 1px solid #eee
+						color: #444 !important
+						text-align: center
+
+			&--user
+			
+				padding: 0 20px
+				
+				>li
+					
+					a
+						padding: 6px 20px
+						margin: 0 -20px
+
+
+@media only screen and (max-width : 991px)
+
+	.l-header
+		height: auto
+		padding: 0
+
+		.header
+			height: 50px
+
+			&_logo
+				width: auto
+				float: left
+
+			&_nav
+
+				.nav_item
+				float: none
+
+@media only screen and (max-width : 767px)
+
+	.l-header
+		padding: 0
+
+		h3
+			margin: 0
+
+		.header
+
+			&_logo
+				width: 50%
+
+				&.active
+					transform: translate3d(0, 0, 0)
+
+			&-toggle
+				position: absolute
+				top: 0
+
+				&--sidebar
+					left: 0
+				&--settings
+					right: 0
+
+@media only screen and (max-width : 479px)
+
+	.l-header
+
+		.header
+
+			&_logo
+			
+				margin-top: 0

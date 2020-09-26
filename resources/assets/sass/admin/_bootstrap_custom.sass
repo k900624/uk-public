@@ -1,0 +1,2024 @@
+// 
+// @author SillexLab (sillexlab@gmail.com)
+// @copyright 2020
+// 
+// rewrite bootstrap styles
+
+
+// form-group
+// --------------------------------------------------
+.form-group
+
+	.form-control.error,
+	input.error
+		border-color: $danger-base
+	
+	.form-control.valid,
+	.form-control.success,
+	input.valid,
+	input.success
+		border-color: $success-base
+
+	.form-control.warning,
+	input.warning
+		border-color: $warning-base
+	
+	label.error
+		color: $danger-base
+		font-size: 11px
+		font-weight: normal
+
+	label.warning
+		color: $warning-base
+		font-size: 11px
+		font-weight: normal
+
+
+// form-control
+// --------------------------------------------------
+.form-control
+	display: block
+	width: 100%
+	height: 31px
+	padding: 5px 12px
+	font-size: 12px
+	line-height: 1.42857143
+	color: #666
+	background-color: #fff
+	background-image: none
+	border: 1px solid #ccc
+	border-radius: 0
+	box-shadow: none
+	
+	&.focused,
+	&:focus
+		border-color: $primary-lighten-2
+		outline: 0
+		box-shadow: none
+	
+	&.input-lg
+		height: 46px
+		padding: 10px 16px
+		font-size: 18px
+		line-height: 1.3333333
+	
+	&.input-sm
+		padding: 5px 10px
+		font-size: 12px
+		line-height: 1.5
+	
+	option[disabled]
+		margin-left: -5px
+		color: #999
+		text-transform: uppercase
+
+// select.form-control
+// 	position: relative
+// 	-webkit-appearance: none
+
+// 	&:after
+// 		content: ""
+// 		position: absolute
+// 		top: 50%
+// 		right: 5px
+// 		display: inline-block
+// 		width: 0
+// 		height: 0
+// 		margin-left: 2px
+// 		vertical-align: middle
+// 		border-top: 4px dashed
+// 		border-top: 4px solid\9
+// 		border-right: 4px solid transparent
+// 		border-left: 4px solid transparent
+
+.has-feedback .form-control-feedback
+	position: absolute
+	top: 0
+	right: 0
+	display: block
+	width: 30px
+	height: 30px
+	line-height: 30px
+	text-align: center
+
+.form-inline
+
+	.form-control
+		height: 31px !important
+
+	.form-group
+		margin-right: 10px
+
+	label
+		margin-right: 10px
+
+
+// btn
+// --------------------------------------------------
+.btn-group ~ .btn-group
+	margin-left: 2px
+
+.btn-group:first-child
+	margin: 0
+	
+.btn-group
+
+	label
+
+		&.btn
+			font-family: $global-font-family
+
+.btn ~ .btn
+	margin-left: 5px
+
+.btn
+	min-width: 100px
+	padding: 6px 12px
+	text-decoration: none
+	font-size: 12px
+	border-radius: 2px
+	// text-transform: uppercase
+	
+	&:focus,
+	&:active,
+	&:focus:active
+		outline: 0
+		box-shadow: none
+
+	&.dropdown-toggle
+		min-width: auto
+	
+	&-inverse,
+	&-success,
+	&-info,
+	&-warning,
+	&-danger,
+	&-primary,
+	&-purple,
+	&-deep-purple,
+	&-indigo,
+	&-teal,
+	&-mdb
+		color: #fff
+
+		&:hover,
+		&:focus
+			color: #fff
+
+	&-default
+		color: #333
+		background-color: $default-base
+		border-color: $default-darken-3
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $default-darken-1
+			border-color: $default-darken-3
+		
+	&-inverse
+		background-color: $inverse-base
+		border-color: $inverse-darken-1
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $inverse-darken-2
+			border-color: $inverse-darken-3
+		
+	&-success
+		background-color: $success-base
+		border-color: $success-darken-1
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $success-darken-2
+			border-color: $success-darken-3
+		
+	&-info
+		background-color: $info-base
+		border-color: $info-darken-1
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $info-darken-2
+			border-color: $info-darken-3
+		
+	&-warning
+		background-color: $warning-base
+		border-color: $warning-darken-1
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $warning-darken-2
+			border-color: $warning-darken-3
+		
+	&-danger
+		background-color: $danger-base
+		border-color: $danger-darken-1
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $danger-darken-2
+			border-color: $danger-darken-3
+		
+	&-primary
+		background-color: $primary-base
+		border-color: $primary-darken-1
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $primary-darken-2
+			border-color: $primary-darken-3
+		
+	&-purple
+		background-color: $purple-base
+		border-color: $purple-darken-1
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $purple-darken-2
+			border-color: $purple-darken-3
+			
+	&-deep-purple
+		background-color: $deep-purple-base
+		border-color: $deep-purple-darken-1
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $deep-purple-darken-2
+			border-color: $deep-purple-darken-3
+			
+	&-indigo
+		background-color: $indigo-base
+		border-color: $indigo-darken-1
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $indigo-darken-2
+			border-color: $indigo-darken-3
+			
+	&-teal
+		background-color: $teal-base
+		border-color: $teal-darken-1
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $teal-darken-2
+			border-color: $teal-darken-3
+
+	&-mdb
+		background-color: $mdb-base
+		border-color: $mdb-darken-1
+
+		&:focus,
+		&:active,
+		&:hover,
+		&:active:focus
+			background-color: $mdb-darken-2
+			border-color: $mdb-darken-3
+
+	&-link
+		color: $primary-base
+		background-color: transparent !important
+		border-color: transparent !important
+		
+		&:hover
+			text-decoration: underline !important
+
+		&.btn-inverse,
+		&.btn-inverse:hover
+			color: $inverse-base
+	
+		&.btn-success,
+		&.btn-success:hover
+			color: $success-base
+
+		&.btn-info,
+		&.btn-info:hover
+			color: $info-base
+			
+		&.btn-warning,
+		&.btn-warning:hover
+			color: $warning-base
+			
+		&.btn-danger,
+		&.btn-danger:hover
+			color: $danger-base
+
+		&.btn-primary,
+		&.btn-primary:hover
+			color: $primary-base
+
+		&.btn-purple,
+		&.btn-purple:hover
+			color: $purple-base
+
+		&.btn-deep-purple,
+		&.btn-deep-purple:hover
+			color: $deep-purple-base
+
+		&.btn-indigo,
+		&.btn-indigo:hover
+			color: $indigo-base
+
+		&.btn-teal,
+		&.btn-teal:hover
+			color: $teal-base
+
+		&.btn-mdb,
+		&.btn-mdb:hover
+			color: $mdb-base
+
+
+	&-circle
+		overflow: hidden
+		min-width: auto
+		width: 30px
+		height: 30px
+		padding: 0
+		line-height: 28px
+		border-radius: 50% !important
+
+		i
+			display: inline-block
+			text-align: center
+
+
+	&-rounded
+		border-radius: 10em
+
+
+	&-shadow
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12)
+
+		&:hover
+			box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)
+			outline: 0
+
+
+	&-outline
+		
+		&-inverse,
+		&-success,
+		&-info,
+		&-warning,
+		&-danger,
+		&-primary,
+		&-purple,
+		&-deep-purple,
+		&-indigo,
+		&-teal,
+		&-mdb
+			background-image: none
+			background-color: transparent
+
+			&:focus,
+			&:active,
+			&:hover
+				color: #fff
+
+		&-inverse
+			color: $inverse-base
+			border-color: $inverse-base
+
+			&:focus,
+			&:active,
+			&:hover
+				background-color: $inverse-base
+				border-color: $inverse-base
+	
+		&-success
+			color: $success-base
+			border-color: $success-base
+
+			&:focus,
+			&:active,
+			&:hover
+				background-color: $success-base
+				border-color: $success-base
+
+		&-info
+			color: $info-base
+			border-color: $info-base
+
+			&:focus,
+			&:active,
+			&:hover
+				background-color: $info-base
+				border-color: $info-base
+			
+		&-warning
+			color: $warning-base
+			border-color: $warning-base
+
+			&:focus,
+			&:active,
+			&:hover
+				background-color: $warning-base
+				border-color: $warning-base
+			
+		&-danger
+			color: $danger-base
+			border-color: $danger-base
+
+			&:focus,
+			&:active,
+			&:hover
+				background-color: $danger-base
+				border-color: $danger-base
+
+		&-primary
+			color: $primary-base
+			border-color: $primary-base
+
+			&:focus,
+			&:active,
+			&:hover
+				background-color: $primary-base
+				border-color: $primary-base
+
+		&-purple
+			color: $purple-base
+			border-color: $purple-base
+
+			&:focus,
+			&:active,
+			&:hover
+				background-color: $purple-base
+				border-color: $purple-base
+
+		&-deep-purple
+			color: $deep-purple-base
+			border-color: $deep-purple-base
+
+			&:focus,
+			&:active,
+			&:hover
+				background-color: $deep-purple-base
+				border-color: $deep-purple-base
+
+		&-indigo
+			color: $indigo-base
+			border-color: $indigo-base
+
+			&:focus,
+			&:active,
+			&:hover
+				background-color: $indigo-base
+				border-color: $indigo-base
+
+		&-teal
+			color: $teal-base
+			border-color: $teal-base
+
+			&:focus,
+			&:active,
+			&:hover
+				background-color: $teal-base
+				border-color: $teal-base
+
+		&-mdb
+			color: $mdb-base
+			border-color: $mdb-base
+
+			&:focus,
+			&:active,
+			&:hover
+				background-color: $mdb-base
+				border-color: $mdb-base
+
+	&.btn-lg
+		padding: 12px 32px
+		line-height: 1.3333333
+		font-size: 14px
+		text-transform: uppercase
+		border-radius: 2px
+	
+	&.btn-sm
+		min-width: auto
+		padding: 5px 10px
+		font-size: 11px
+		line-height: 1.5
+		border-radius: 2px
+	
+	&.btn-xs
+		min-width: auto
+		padding: 2px 6px
+		font-size: 11px
+		line-height: 18px
+		border-radius: 2px
+
+	&.btn-short
+		min-width: auto
+		padding: 6px 10px
+
+
+// input-group
+// --------------------------------------------------
+.input-group-btn
+
+	.btn
+		min-width: auto
+
+.input-group .input-group-addon
+	border-radius: 2px
+
+
+// bg
+// --------------------------------------------------
+.bg
+
+	&-inverse,
+	&-success,
+	&-info,
+	&-warning,
+	&-danger,
+	&-primary,
+	&-grey,
+	&-purple,
+	&-deep-purple,
+	&-indigo,
+	&-teal,
+	&-mdb
+		color: $white
+
+	&-inverse
+		background-color: $inverse-base
+		&-lighten-1
+			background-color: $inverse-lighten-1
+		&-lighten-2
+			background-color: $inverse-lighten-2
+		&-lighten-3
+			background-color: $inverse-lighten-3
+		&-lighten-4
+			background-color: $inverse-lighten-4
+		&-lighten-5
+			background-color: $inverse-lighten-5
+		&-darken-1
+			background-color: $inverse-darken-1
+		&-darken-2
+			background-color: $inverse-darken-2
+		&-darken-3
+			background-color: $inverse-darken-3
+
+	&-success
+		background-color: $success-base
+		&-lighten-1
+			background-color: $success-lighten-1
+		&-lighten-2
+			background-color: $success-lighten-2
+		&-lighten-3
+			background-color: $success-lighten-3
+			color: $black
+		&-lighten-4
+			background-color: $success-lighten-4
+			color: $black
+		&-darken-1
+			background-color: $success-darken-1
+		&-darken-2
+			background-color: $success-darken-2
+		&-darken-3
+			background-color: $success-darken-3
+		&-darken-4
+			background-color: $success-darken-4
+
+	&-info
+		background-color: $info-base
+		&-lighten-1
+			background-color: $info-lighten-1
+		&-lighten-2
+			background-color: $info-lighten-2
+		&-lighten-3
+			background-color: $info-lighten-3
+			color: $black
+		&-lighten-4
+			background-color: $info-lighten-4
+			color: $black
+		&-darken-1
+			background-color: $info-darken-1
+		&-darken-2
+			background-color: $info-darken-2
+		&-darken-3
+			background-color: $info-darken-3
+		&-darken-4
+			background-color: $info-darken-4
+
+	&-warning
+		background-color: $warning-base
+		&-lighten-1
+			background-color: $warning-lighten-1
+		&-lighten-2
+			background-color: $warning-lighten-2
+		&-lighten-3
+			background-color: $warning-lighten-3
+		&-lighten-4
+			background-color: $warning-lighten-4
+			color: $black
+		&-lighten-5
+			background-color: $warning-lighten-5
+			color: $black
+		&-darken-1
+			background-color: $warning-darken-1
+		&-darken-2
+			background-color: $warning-darken-2
+		&-darken-3
+			background-color: $warning-darken-3
+
+	&-danger
+		background-color: $danger-base
+		&-lighten-1
+			background-color: $danger-lighten-1
+		&-lighten-2
+			background-color: $danger-lighten-2
+		&-lighten-3
+			background-color: $danger-lighten-3
+			color: $black
+		&-lighten-4
+			background-color: $danger-lighten-4
+			color: $black
+		&-darken-1
+			background-color: $danger-darken-1
+		&-darken-2
+			background-color: $danger-darken-2
+		&-darken-3
+			background-color: $danger-darken-3
+		&-darken-4
+			background-color: $danger-darken-4
+
+	&-primary
+		background-color: $primary-base
+		&-lighten-1
+			background-color: $primary-lighten-1
+		&-lighten-2
+			background-color: $primary-lighten-2
+		&-lighten-3
+			background-color: $primary-lighten-3
+			color: $black
+		&-lighten-4
+			background-color: $primary-lighten-4
+			color: $black
+		&-lighten-5
+			background-color: $primary-lighten-5
+			color: $black
+		&-darken-1
+			background-color: $primary-darken-1
+		&-darken-2
+			background-color: $primary-darken-2
+		&-darken-3
+			background-color: $primary-darken-3
+
+	&-grey
+		background-color: $grey-base
+		&-lighten-1
+			background-color: $grey-lighten-1
+		&-lighten-2
+			background-color: $grey-lighten-2
+			color: $black
+		&-lighten-3
+			background-color: $grey-lighten-3
+			color: $black
+		&-lighten-4
+			background-color: $grey-lighten-4
+			color: $black
+		&-darken-1
+			background-color: $grey-darken-1
+		&-darken-2
+			background-color: $grey-darken-2
+		&-darken-3
+			background-color: $grey-darken-3
+		&-darken-4
+			background-color: $grey-darken-4
+
+	&-purple
+		background-color: $purple-base
+		&-lighten-1
+			background-color: $purple-lighten-1
+		&-lighten-2
+			background-color: $purple-lighten-2
+		&-lighten-3
+			background-color: $purple-lighten-3
+			color: $black
+		&-lighten-4
+			background-color: $purple-lighten-4
+			color: $black
+		&-darken-1
+			background-color: $purple-darken-1
+		&-darken-2
+			background-color: $purple-darken-2
+		&-darken-3
+			background-color: $purple-darken-3
+		&-darken-4
+			background-color: $purple-darken-4
+
+	&-deep-purple
+		background-color: $deep-purple-base
+		&-lighten-1
+			background-color: $deep-purple-lighten-1
+		&-lighten-2
+			background-color: $deep-purple-lighten-2
+		&-lighten-3
+			background-color: $deep-purple-lighten-3
+			color: $black
+		&-lighten-4
+			background-color: $deep-purple-lighten-4
+			color: $black
+		&-darken-1
+			background-color: $deep-purple-darken-1
+		&-darken-2
+			background-color: $deep-purple-darken-2
+		&-darken-3
+			background-color: $deep-purple-darken-3
+		&-darken-4
+			background-color: $deep-purple-darken-4
+
+	&-indigo
+		background-color: $indigo-base
+		&-lighten-1
+			background-color: $indigo-lighten-1
+		&-lighten-2
+			background-color: $indigo-lighten-2
+		&-lighten-3
+			background-color: $indigo-lighten-3
+			color: $black
+		&-lighten-4
+			background-color: $indigo-lighten-4
+			color: $black
+		&-darken-1
+			background-color: $indigo-darken-1
+		&-darken-2
+			background-color: $indigo-darken-2
+		&-darken-3
+			background-color: $indigo-darken-3
+		&-darken-4
+			background-color: $indigo-darken-4
+
+	&-teal
+		background-color: $teal-base
+		&-lighten-1
+			background-color: $teal-lighten-1
+		&-lighten-2
+			background-color: $teal-lighten-2
+		&-lighten-3
+			background-color: $teal-lighten-3
+			color: $black
+		&-lighten-4
+			background-color: $teal-lighten-4
+			color: $black
+		&-darken-1
+			background-color: $teal-darken-1
+		&-darken-2
+			background-color: $teal-darken-2
+		&-darken-3
+			background-color: $teal-darken-3
+		&-darken-4
+			background-color: $teal-darken-4
+
+	&-mdb
+		background-color: $mdb-base
+		&-lighten-1
+			background-color: $mdb-lighten-1
+		&-lighten-2
+			background-color: $mdb-lighten-2
+		&-lighten-3
+			background-color: $mdb-lighten-3
+		&-lighten-4
+			background-color: $mdb-lighten-4
+		&-darken-1
+			background-color: $mdb-darken-1
+		&-darken-2
+			background-color: $mdb-darken-2
+		&-darken-3
+			background-color: $mdb-darken-3
+		&-darken-4
+			background-color: $mdb-darken-4
+	
+	// gradients
+	&-gradient
+
+		&-info
+			background-image: linear-gradient(135deg,$info-lighten-1 0,$info-darken-3 100%)
+			color: #fff
+
+		&-danger
+			background-image: linear-gradient(135deg,$danger-lighten-2 0,$danger-darken-3 100%)
+			color: #fff
+
+		&-success
+			background-image: linear-gradient(135deg,$success-lighten-1 0,$success-darken-3 100%)
+			color: #fff
+
+		&-warning
+			background-image: linear-gradient(135deg,$warning-lighten-3 0,$warning-darken-3 100%)
+			color: #fff
+
+	&-gradient-light
+
+		&-info
+			background-image: linear-gradient(135deg,$info-lighten-3 0,$info-darken-1 100%)
+
+			.widget_link,
+			.widget_link:hover
+				color: #fff
+
+		&-danger
+			background-image: linear-gradient(135deg,$danger-lighten-3 0,$danger-base 100%)
+
+			.widget_link,
+			.widget_link:hover
+				color: #fff
+
+		&-success
+			background-image: linear-gradient(135deg,$success-lighten-3 0,$success-darken-1 100%)
+
+			.widget_link,
+			.widget_link:hover
+				color: #fff
+
+		&-warning
+			background-image: linear-gradient(135deg,$warning-lighten-5 0,$warning-darken-1 100%)
+
+			.widget_link,
+			.widget_link:hover
+				color: #fff
+
+
+// text
+// --------------------------------------------------
+
+// primary
+.text-primary
+	color: $primary-base
+
+a.text-primary:hover,
+a.text-primary:focus
+	color: $primary-base
+
+// success
+.text-success
+	color: $success-base
+
+a.text-success:hover,
+a.text-success:focus
+	color: $success-base
+
+// info
+.text-info
+	color: $info-base
+
+a.text-info:hover,
+a.text-info:focus
+	color: $info-base
+
+// warning
+.text-warning
+	color: $warning-base
+
+a.text-warning:hover,
+a.text-warning:focus
+	color: $warning-base
+
+// danger
+.text-danger
+	color: $danger-base
+
+a.text-danger:hover,
+a.text-danger:focus
+	color: $danger-base
+
+// purple
+.text-purple
+	color: $purple-base
+
+a.text-purple:hover,
+a.text-purple:focus
+	color: $purple-base
+
+// deep-purple
+.text-deep-purple
+	color: $deep-purple-base
+
+a.text-deep-purple:hover,
+a.text-deep-purple:focus
+	color: $deep-purple-base
+
+// grey-lighten-4
+.text-grey-lighten-4
+	color: $grey-lighten-4
+
+a.text-grey-lighten-4:hover,
+a.text-grey-lighten-4:focus
+	color: $grey-lighten-4
+
+// grey-lighten-3
+.text-grey-lighten-3
+	color: $grey-lighten-3
+
+a.text-grey-lighten-3:hover,
+a.text-grey-lighten-3:focus
+	color: $grey-lighten-3
+
+// grey-lighten-2
+.text-grey-lighten-2
+	color: $grey-lighten-2
+
+a.text-grey-lighten-2:hover,
+a.text-grey-lighten-2:focus
+	color: $grey-lighten-2
+
+// grey-lighten-1
+.text-grey-lighten-1
+	color: $grey-lighten-1
+
+a.text-grey-lighten-1:hover,
+a.text-grey-lighten-1:focus
+	color: $grey-lighten-1
+
+// grey-base
+.text-grey-base
+	color: $grey-base
+
+a.text-grey-base:hover,
+a.text-grey-base:focus
+	color: $grey-base
+
+// grey-darken-1
+.text-grey-darken-1
+	color: $grey-darken-1
+
+a.text-grey-darken-1:hover,
+a.text-grey-darken-1:focus
+	color: $grey-darken-1
+
+// grey-darken-2
+.text-grey-darken-2
+	color: $grey-darken-2
+
+a.text-grey-darken-2:hover,
+a.text-grey-darken-2:focus
+	color: $grey-darken-2
+
+// grey-darken-3
+.text-grey-darken-3
+	color: $grey-darken-3
+
+a.text-grey-darken-3:hover,
+a.text-grey-darken-3:focus
+	color: $grey-darken-3
+
+// grey-darken-4
+.text-grey-darken-4
+	color: $grey-darken-4
+
+a.text-grey-darken-4:hover,
+a.text-grey-darken-4:focus
+	color: $grey-darken-4
+
+// indigo
+.text-indigo
+	color: $indigo-base
+
+a.text-indigo:hover,
+a.text-indigo:focus
+	color: $indigo-base
+
+// teal
+.text-teal
+	color: $teal-base
+
+a.text-teal:hover,
+a.text-teal:focus
+	color: $teal-base
+
+// mdb
+.text-mdb
+	color: $mdb-base
+
+a.text-mdb:hover,
+a.text-mdb:focus
+	color: $mdb-base
+
+// white
+.text-white
+	color: $white
+
+a.text-white:hover,
+a.text-white:focus
+	color: $white
+
+// black
+.text-black
+	color: $black
+
+a.text-black:hover,
+a.text-black:focus
+	color: $black
+
+
+// form-actions
+// --------------------------------------------------
+.form-actions
+	padding: 20px
+	margin-top: 20px
+	background-color: #f5f5f5
+	overflow: hidden
+
+
+// nav
+// --------------------------------------------------
+.nav>li>a
+	padding: 8px 15px
+	color: inherit
+
+	&:hover
+    border-top-color: #ddd
+
+.nav-pills>li>a
+	border-radius: 0
+	border-left: 3px solid transparent
+	color: inherit
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus
+	background-color: $primary-base
+
+.nav-pills.nav-stacked>li.active>a,
+.nav-pills.nav-stacked>li.active>a:hover,
+.nav-pills.nav-stacked>li.active>a:focus
+	border-color: $primary-base
+	background-color: #eee
+	color: inherit
+
+.nav-pills>li>a>.fa,
+.nav-pills>li>a>.glyphicon
+	margin-right: 5px
+
+.nav-tabs>li>a
+	border-top: 3px solid transparent
+	border-radius: 2px 2px 0 0
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover
+	border-top: 3px solid $primary-base
+
+.nav-tabs>li.order-quick-labels
+	padding: 7px 0 0
+	margin-right: 20px
+
+	a.order-quick-labels_link
+		display: inline-block
+		padding: 1px 4px 2px
+		min-width: 30px
+		text-align: center
+		color: #aaa
+		border-radius: 2px
+		font-size: 11px
+
+		&.is-checked
+			background-color: $success-base
+			color: #fff
+
+		&:hover
+			border-color: transparent
+
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover
+	background-color: #eee
+	border-color: #ddd
+	color: inherit
+
+.order-quick-labels
+	display: inline-block
+
+	&_item
+		display: inline-block
+		margin-left: 6px
+		text-transform: uppercase
+		font-size: 11px
+		color: #aaa
+
+// tabs
+// --------------------------------------------------
+.nav.nav-tabs
+	margin-bottom: 30px
+
+// tabs-bottom
+.tabs-bottom
+
+	&.nav-tabs
+		margin-top: 30px
+		margin-bottom: 0
+		border-top: 1px solid #ddd
+		border-bottom: 3px solid transparent
+
+.tabs-bottom.nav-tabs>li>a
+	border-top: 1px solid transparent
+	margin-top: -1px
+	border-bottom: 3px solid transparent
+	border-radius: 0 0 2px 2px
+
+.tabs-bottom.nav-tabs .open>a,
+.tabs-bottom.nav-tabs>li>a:hover,
+.tabs-bottom.nav-tabs>li>a:focus
+	border-color: #ddd #eee #ddd #eee
+
+.tabs-bottom.nav-tabs .active>a,
+.tabs-bottom.nav-tabs .active>a:hover,
+.tabs-bottom.nav-tabs .active>a:focus
+	border-top: 1px solid transparent
+	border-bottom: 3px solid transparent
+	border-color: transparent #ddd $primary-base
+
+.tabs-left.nav-tabs>li,
+.tabs-right.nav-tabs>li
+	float: none
+
+// tabs-left
+.tabs-left.nav-tabs>li>a,
+.tabs-right.nav-tabs>li>a
+	min-width: 74px
+	margin-right: 0
+	margin-bottom: 3px
+
+.tabs-left.nav-tabs
+	float: left
+	margin-right: 19px
+	border-right: 1px solid #ddd
+	border-bottom: 1px solid transparent
+	min-width: 100px
+
+.tabs-left.nav-tabs ~ .tab-content
+	margin-left: 100px
+
+.tabs-left.nav-tabs>li>a
+	margin-right: -1px
+	border-radius: 2px 0 0 2px
+
+.tabs-left.nav-tabs .active>a,
+.tabs-left.nav-tabs>li>a:hover,
+.tabs-left.nav-tabs>li>a:focus
+	border-color: #ddd #ddd #eee #eee
+
+.tabs-left.nav-tabs .active>a,
+.tabs-left.nav-tabs .active>a:hover,
+.tabs-left.nav-tabs .active>a:focus
+	border-color: $primary-base transparent #ddd #ddd
+
+// tabs-right
+.tabs-right.nav-tabs
+	float: right
+	margin-left: 19px
+	border-left: 1px solid #ddd
+	border-bottom: 1px solid transparent
+	min-width: 100px
+
+.tabs-right.nav-tabs ~ .tab-content
+	margin-right: 100px
+
+.tabs-right.nav-tabs>li>a
+	margin-left: -1px
+	border-radius: 0 2px 2px 0
+
+.tabs-right.nav-tabs .active>a,
+.tabs-right.nav-tabs>li>a:hover,
+.tabs-right.nav-tabs>li>a:focus
+	border-color: #ddd #eee #eee #ddd
+
+.tabs-right.nav-tabs .active>a,
+.tabs-right.nav-tabs .active>a:hover,
+.tabs-right.nav-tabs .active>a:focus
+	border-color: $primary-base #ddd #ddd transparent
+
+
+// breadcrumb
+// --------------------------------------------------
+.breadcrumb > li > a
+	color: inherit
+
+
+// pager
+// --------------------------------------------------
+.pager li>a,
+.pager li>span
+	color: inherit
+
+
+// list-group
+// --------------------------------------------------
+.list-group
+
+	&-item
+
+		&:first-child,
+		&:last-child
+			border-radius: 0
+
+		&:hover
+			background-color: #f5f5f5
+
+		&.active,
+		&.active:focus,
+		&.active:hover
+			color: #fff
+			background-color: $primary-base
+			border-color: $primary-base
+		
+	&-flush
+
+		.list-group-item
+			border-right: none
+			border-left: none
+
+
+// checkbox, radio
+// --------------------------------------------------
+.checkbox,
+.radio
+	margin-top: 6px
+	margin-bottom: 12px
+
+.checkbox-inline,
+.radio-inline
+	padding-left: 0
+
+
+// lead
+// --------------------------------------------------
+.lead
+	margin-bottom: 1rem
+	font-size: 1.5rem
+	font-family: RobotoLight,Helvetica,"Helvetica Neue",Arial,"Liberation Sans",FreeSans,sans-serif
+
+	small
+		font-size: 75%
+		display: block
+
+
+// legend
+// --------------------------------------------------
+legend
+	font-size: 20px
+	vertical-align: middle
+	line-height: 30px
+	padding: 10px 0 0
+
+	small
+		font-size: 14px
+
+
+// label
+// --------------------------------------------------
+
+a.label,
+a.badge
+	color: #fff
+
+.label,
+.badge
+	display: inline-block
+	padding: 2px 4px
+	min-width: 20px
+	line-height: 14px
+	text-shadow: none
+	font-weight: 300
+	font-size: 11px
+	color: #fff
+	border: 1px solid transparent
+	background-color: $grey-darken-1
+
+	&-primary
+		background-color: $primary-base
+		border-color: $primary-base
+	
+	&-success
+		background-color: $success-base
+		border-color: $success-base
+	
+	&-danger
+		background-color: $danger-base
+		border-color: $danger-base
+	
+	&-default
+		background-color: $inverse-base
+		border-color: $inverse-base
+	
+	&-info
+		background-color: $info-base
+		border-color: $info-base
+	
+	&-warning
+		background-color: $warning-base
+		border-color: $warning-base
+
+	&-primary-light
+		background-color: $primary-lighten-2
+		border-color: $primary-lighten-2
+	
+	&-success-light
+		background-color: $success-lighten-2
+		border-color: $success-lighten-2
+	
+	&-danger-light
+		background-color: $danger-lighten-2
+		border-color: $danger-lighten-2
+	
+	&-default-light
+		background-color: $inverse-lighten-2
+		border-color: $inverse-lighten-2
+	
+	&-info-light
+		background-color: $info-lighten-2
+		border-color: $info-lighten-2
+	
+	&-warning-light
+		background-color: $warning-lighten-2
+		border-color: $warning-lighten-2
+
+	&-grey
+		background-color: $grey-base
+		border-color: $grey-base
+		&-lighten-1
+			background-color: $grey-lighten-1
+			border-color: $grey-lighten-1
+		&-lighten-2
+			background-color: $grey-lighten-2
+			border-color: $grey-lighten-2
+			color: $black
+		&-lighten-3
+			background-color: $grey-lighten-3
+			border-color: $grey-lighten-3
+			color: $black
+		&-lighten-4
+			background-color: $grey-lighten-4
+			border-color: $grey-lighten-4
+			color: $black
+		&-darken-1
+			background-color: $grey-darken-1
+			border-color: $grey-darken-1
+		&-darken-2
+			background-color: $grey-darken-2
+			border-color: $grey-darken-2
+		&-darken-3
+			background-color: $grey-darken-3
+			border-color: $grey-darken-3
+		&-darken-4
+			background-color: $grey-darken-4
+			border-color: $grey-darken-4
+
+	&-outline
+		
+		&-default,
+		&-success,
+		&-info,
+		&-warning,
+		&-danger,
+		&-primary
+			background-image: none
+			background-color: transparent
+			
+		&-default
+			color: $inverse-base!important
+			border-color: $inverse-base
+			
+		&-success
+			color: $success-base!important
+			border-color: $success-base
+			
+		&-info
+			color: $info-base!important
+			border-color: $info-base
+			
+		&-warning
+			color: $warning-base!important
+			border-color: $warning-base
+
+		&-danger
+			color: $danger-base!important
+			border-color: $danger-base
+			
+		&-primary
+			color: $primary-base!important
+			border-color: $primary-base
+
+
+// alert
+// --------------------------------------------------
+.alert
+	padding: 10px 20px 10px 15px
+	border-radius: 0
+
+	a,
+	.alert-link
+		text-decoration: underline
+	
+	a.btn
+		text-decoration: none
+
+	&-success
+		color: $success-base
+		background-color: $success-lighten-4
+		border-color: $success-lighten-3
+
+		a, .alert-link
+			color: $success-darken-1
+
+	&-info
+		color: $info-base
+		background-color: $info-lighten-4
+		border-color: $info-lighten-3
+
+		a, .alert-link
+			color: $info-darken-1
+			
+	&-warning
+		color: $warning-base
+		background-color: $warning-lighten-6
+		border-color: $warning-lighten-5
+
+		a, .alert-link
+			color: $warning-darken-1
+
+	&-danger
+		color: $danger-base
+		background-color: $danger-lighten-4
+		border-color: $danger-lighten-3
+
+		a, .alert-link
+			color: $danger-darken-1
+
+	.close
+		top: -3px
+		right: -10px
+
+		&:focus,
+		&:hover
+			outline: none
+
+
+// well
+// --------------------------------------------------
+.well
+	border-radius: 1px
+	box-shadow: none
+
+
+// panel
+// --------------------------------------------------
+.panel
+	border-radius: 1px !important
+
+	&-heading
+		padding: 0
+		border-radius: 1px
+
+		a
+			display: block
+			padding: 8px 15px
+			color: #666
+			font-weight: 400
+
+
+// table
+// --------------------------------------------------
+.table
+	
+	>tbody>tr.selected>td
+		background-color: $warning-lighten-6 !important
+
+	>tbody>tr:hover
+
+		.order-contenteditable
+			outline: -webkit-focus-ring-color auto 5px
+	
+	th,
+	td
+		font-weight: normal
+		color: #666
+		padding-right: 0 !important
+		
+		&.width-10
+			width: 10px
+
+		&.width-20
+			width: 20px
+
+		&.width-30
+			width: 30px
+
+		&.width-40
+			width: 40px
+
+		&.width-50
+			width: 50px
+
+		&.width-60
+			width: 60px
+
+		&.width-70
+			width: 70px
+
+		&.width-80
+			width: 80px
+
+		&.width-90
+			width: 90px
+
+		&.width-100
+			width: 100px
+
+		&.width-percent-10
+			width: 10%
+
+		&.width-percent-20
+			width: 20%
+
+		&.width-percent-30
+			width: 30%
+
+		&.width-percent-40
+			width: 40%
+
+		&.width-percent-50
+			width: 50%
+
+		&.width-percent-60
+			width: 60%
+
+		&.width-percent-70
+			width: 70%
+
+		&.width-percent-80
+			width: 80%
+
+		&.width-percent-90
+			width: 90%
+		
+		.dropdown-menu,
+		.btn
+			font-family: "RobotoRegular", sans-serif, arial, verdana, Lucida Sans
+		
+	&.table-fixed
+		table-layout: table-fixed
+	
+	.tiny-column
+		width: 18px
+	
+	.col-action
+		text-align: center
+
+		.btn-group
+			display: flex
+			justify-content: flex-end
+
+			.btn
+				flex: 0
+	
+	.icheckbox_square-grey
+		transform: scale(0.72)
+	
+	.chart-cell
+		padding: 3px
+
+	address
+		margin-bottom: 0
+	
+	small
+		display: block
+
+		&.alert
+			padding: 5px 10px 5px 5px
+			margin-top: 5px
+			margin-bottom: 5px
+
+		&:not([class])
+			color: $grey-base
+		
+		a
+			color: $grey-base
+		
+	.form-control
+		height: 28px
+		line-height: 24px
+		padding: 0 6px
+	
+	>tbody>tr.info>td
+		background-color: $info-lighten-4
+
+	>tbody>tr.success>td
+		background-color: $success-lighten-4
+
+	>tbody>tr.danger>td
+		background-color: $danger-lighten-4
+
+	>tbody>tr.warning>td
+		background-color: $warning-lighten-6
+
+
+// blockquote
+// --------------------------------------------------
+.blockquote
+
+	small
+		&:before
+			content: ''
+
+
+// help-block
+// --------------------------------------------------
+.help-block
+	font-size: 11px
+
+
+// progress
+// --------------------------------------------------
+.progress
+	height: 4px
+	border-radius: 0
+	box-shadow: none
+	background-color: #c8c8c8
+
+	&.progress-line-primary
+		background-color: $primary-lighten-5
+	
+	&.progress-line-info
+		background-color: $info-lighten-3
+	
+	&.progress-line-danger
+		background-color: $danger-lighten-3
+	
+	&.progress-line-warning
+		background-color: $warning-lighten-5
+		
+	&.progress-line-success
+		background-color: $success-lighten-3
+	
+	.progress-bar
+		box-shadow: none
+	
+	.progress-bar,
+	.progress .progress-bar.progress-bar-default
+		background-color: #9e9e9e
+	
+	.progress-bar.progress-bar-inverse
+		background-color: #3f51b5
+	
+	.progress-bar.progress-bar-primary
+		background-color: $primary-base
+	
+	.progress-bar.progress-bar-success
+		background-color: $success-base
+	
+	.progress-bar.progress-bar-info
+		background-color: $info-base
+	
+	.progress-bar.progress-bar-warning
+		background-color: $warning-base
+	
+	.progress-bar.progress-bar-danger
+		background-color: $danger-base
+
+
+// dropdown-menu
+// --------------------------------------------------
+.dropdown-menu
+	font-size: 12px
+	border-radius: 0
+	border: 1px solid rgba(0,0,0,0.05)
+	// border-radius: 1px
+	box-shadow: 0 6px 12px rgba(0,0,0,0.175)
+	background-clip: padding-box
+
+	> li
+
+		> a
+			padding: 6px 20px
+			color: $text-color !important
+
+	>li.active
+
+		>a
+			color: #fff !important
+
+
+// popover
+// --------------------------------------------------
+.popover
+	border-radius: 0
+	border: 1px solid #ddd
+	font-size: 12px
+	
+	&.top>.arrow
+		border-top-color: #ddd
+	&.right>.arrow
+		border-right-color: #ddd
+	&.bottom>.arrow
+		border-bottom-color: #ddd
+	&.left>.arrow
+		border-left-color: #ddd
+
+
+// Modal
+// --------------------------------------------------
+.modal
+	border: none
+	
+	&.in
+		
+		// hack: Прячем input: radio, bag bootsrap 3.0
+		//.modal-dialog
+			// transform: none
+
+	.modal-title
+		font-size: 22px
+		font-weight: normal
+	
+	.modal-dialog
+		margin-top: 10%
+		
+		&.modal-dialog-small
+			width: 440px
+	
+	.modal-content
+		border-radius: 0
+		box-shadow: 0 2px 26px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.1)
+		border: none
+
+		.modal-header
+			padding: 10px 30px
+			border-bottom: none
+			text-align: center
+			min-height: 38px
+
+			.close
+				position: absolute
+				right: 6px
+				top: 6px
+				height: 32px
+				line-height: 32px
+				width: 32px
+				padding: 0
+				cursor: pointer
+				opacity: 0.6
+				transition-property: color
+				transition-duration: .15s
+
+				&:before,
+				&:after
+					content: ' '
+					position: absolute
+					left: 15px
+					top: 5px
+					height: 22px
+					width: 2px
+					background-color: #000
+
+				&:before
+					transform: rotate(45deg)
+
+				&:after
+					transform: rotate(-45deg)
+				
+				&:focus,
+				&:hover
+					outline: none
+					opacity: 1
+
+		.modal-body
+			padding: 20px
+			font-size: 13px
+			position: initial
+
+			.modal-footer
+				margin: 10px -20px -20px
+		
+		.modal-footer
+			margin-top: 0
+			padding: 10px 20px
+			border-top: none
+			text-align: center
+			border-top: 1px solid #ddd
+			background-color: #fff
+
+			hr
+				margin-top: 0
+			
+			.modal-loader
+				position: absolute
+				right: 30px
+				bottom: 30px
+
+	&--no-body
+		
+		.modal-content
+			box-shadow: none
+			background: transparent
+			
+			.modal-header
+			
+				.close
+					right: 0
+					opacity: .8
+
+					&:before,
+					&:after
+						background-color: #fff
+
+			.modal-title
+				display: none
+
+			.modal-body
+				padding: 0
+				background-color: #fff
+
+			.modal-footer
+				display: none
+			
+			.tab-content
+				padding: 20px
+
+			.nav-tabs
+				margin-bottom: 0
+			
+				&>li
+					width: 50%
+
+	&--top
+		padding-right: 0!important
+
+		.modal-dialog
+			margin-top: 0
+			margin-right: 0
+			margin-left: 0
+			width: 100%
+
+	&--right
+		
+		&.in .modal-dialog
+			transform: translate(0,0)
+
+		&:not(.in) .modal-dialog
+			transform: translate3d(25%,0,0)
+	
+		.modal-dialog
+			position: absolute
+			display: flex
+			margin: 0
+			width: 400px
+			min-height: 100%
+			top: 0
+			right: 0
+			height: 100%
+
+			.modal-content
+				width: 100%
+				display: flex
+				flex-direction: column
+
+				.modal-body
+					flex: 1 1 auto
+
+	&--bottom
+		// padding-right: 0!important
+
+		&.in .modal-dialog
+			transform: translate(0,0)
+
+		&:not(.in) .modal-dialog
+			transform: translate3d(0,0,0)
+
+		.modal-dialog
+			position: absolute
+			bottom: 0
+			width: 100%
+			margin: 0
+
+	&--bottom-right
+
+		&.in .modal-dialog
+			transform: translate(0,0)
+
+		&:not(.in) .modal-dialog
+			transform: translate3d(25%,0,0)
+
+		.modal-dialog
+			position: absolute
+			width: 400px
+			bottom: 20px
+			right: 20px
+			margin: 0
+	
+	&--full
+		padding: 0!important
+
+		&.in .modal-dialog
+			width: 100%
+			height: 100%
+			margin: 0
+
+			.modal-content
+				position: fixed
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+
+	&-success
+		.modal-header
+			background-color: $success-base
+
+	&-info
+		.modal-header
+			background-color: $info-base
+			
+	&-warning
+		.modal-header
+			background-color: $warning-base
+
+	&-danger
+		.modal-header
+			background-color: $danger-base
+	
+	&-success,
+	&-info,
+	&-warning,
+	&-danger
+		.modal-header
+			color: #fff
+
+			.close
+
+				&:before,
+				&:after
+					background-color: #fff!important
+
+
+// pagination
+// --------------------------------------------------
+.pagination
+	border-radius: 0.25rem
+	display: inline-flex
+	list-style-type: none
+	margin: 0
+
+	>li
+		margin: 0 4px
+
+		&.active>a,
+		&.active>a:focus,
+		&.active>a:hover,
+		&:hover>a,
+		&.active>span,
+		&.active>span:focus,
+		&.active>span:hover
+			background-color: #ccc
+			border: none
+			color: #666
+			border-radius: 30px
+		>a,
+		span
+			// float: left
+			// padding: 8px
+			// display: inline-block
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 30px
+			width: 30px
+			// line-height: 13px
+			background-color: $primary-base
+			border: none
+			border-radius: 100% !important
+			// text-align: center
+			color: #fff
+			font-size: 14px
+			font-weight: 700
+			transition: all 0.2s linear 0s
+		
+	&-block
+		text-align: right
+		width: 100%
+		margin: 0
+		white-space: nowrap

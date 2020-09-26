@@ -1,0 +1,336 @@
+// 
+// @author SillexLab (sillexlab@gmail.com)
+// @copyright 2020
+// 
+// responsive styles
+
+
+// ==========================================================================
+// Desktop First Method
+// =========================================================================
+
+// Large Devices, Wide Screens
+// --------------------------------------------------
+// @media only screen and (max-width : 1199px)
+
+
+// Width Primary
+// --------------------------------------------------
+@media only screen and (max-width : 1023px)
+
+	.l-content
+		width: auto
+
+
+// Medium Devices, Desktops
+// --------------------------------------------------
+//@media only screen and (max-width : 991px)
+	
+
+// Small Devices, Tablets
+// --------------------------------------------------
+@media only screen and (max-width : 767px)
+
+	.l-content
+		//margin-top: 65px
+		margin: 70px 10px 0 10px
+
+		.content
+			padding: 0
+
+			&_header
+				margin-bottom: 20px
+	
+	.l-container
+		margin: 0 0 10px
+		height: 100%!important
+
+	.l-middle
+		margin-bottom: 10px
+
+	.content_title
+		display: none
+
+	.block
+		margin-bottom: 15px
+
+		&_header
+			position: relative
+
+			small
+				display: block
+		
+	.table,
+	.widget
+		margin-bottom: 10px
+
+	.table
+
+		> tbody > tr > td
+			line-height: 20px
+
+	.scroll-top
+		bottom: 20px
+	
+	.btn-group
+
+		.btn
+			width: 100%
+		
+		>.btn:first-child:not(:last-child):not(.dropdown-toggle)
+			margin-bottom: 3px
+			border-top-right-radius: 3px
+			border-bottom-right-radius: 3px
+		
+		>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle)
+			margin-bottom: 3px
+			border-radius: 3px
+		
+		>.btn:last-child:not(:first-child),
+		>.dropdown-toggle:not(:first-child)
+			border-top-left-radius: 3px
+			border-bottom-left-radius: 3px
+
+	.breadcrumbs
+
+		a, .last
+			font-size: 12px
+
+		.separator
+			margin: 0
+			
+			&:before
+				display: inline-block
+				padding: 0 5px
+				content: "/"
+
+			.fa
+				display: none
+		
+	.nav_item.logo
+		position: absolute
+		top: 0
+		left: 50%
+		margin-left: -53px
+	
+
+// Extra Small Devices, Phones
+// --------------------------------------------------
+@media only screen and (max-width : 479px)
+
+	body
+		font-size: 14px
+
+	.l-content
+
+		.content
+			overflow: hidden
+
+			&_title
+				font-size: 22px
+	
+	.btn
+		min-width: auto
+	
+	.table th.th-action_view,
+	.table th.th-action_edit
+		width: auto
+	
+	.table td
+		table-layout: fixed
+	
+	.table .col-action
+		display: none
+	
+	.block_body
+		overflow: hidden
+	
+	.btn-group
+
+		.btn
+			margin-left: 0 !important
+
+	.table>tbody>tr>td
+		padding: 8px
+
+
+// Min height
+// --------------------------------------------------
+@media only screen and (max-height : 760px)
+
+	.l-wrapper
+		// height: auto
+
+
+// Custom, iPhone Retina
+// --------------------------------------------------
+// @media only screen and (max-width : 320px)
+
+
+
+// ==========================================================================
+// Mobile First Method
+// =========================================================================
+
+// Custom, iPhone Retina
+// --------------------------------------------------
+// @media only screen and (min-width : 320px)
+
+
+
+// Extra Small Devices, Phones
+// --------------------------------------------------
+// @media only screen and (min-width : 480px)
+
+
+
+// Small Devices, Tablets
+// --------------------------------------------------
+// @media only screen and (min-width : 768px)
+
+
+
+// Medium Devices, Desktops
+// --------------------------------------------------
+// @media only screen and (min-width : 992px)
+
+
+
+// Large Devices, Wide Screens
+// --------------------------------------------------
+// @media only screen and (min-width : 1200px)
+
+
+
+// @media only screen and (min-width: 35em)
+// --------------------------------------------------
+	// Style adjustments for viewports that meet the condition
+
+
+// @media print,
+	(-o-min-device-pixel-ratio: 5/4),
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi)
+// --------------------------------------------------
+	// Style adjustments for high resolution devices
+
+
+// ==========================================================================
+// Print styles.
+// Inlined to avoid the additional HTTP request: h5bp.com/r
+// =========================================================================
+
+@media print
+
+	*
+		background: transparent !important
+		color: #000 !important // Black prints faster: h5bp.com/s
+		box-shadow: none !important
+		text-shadow: none !important
+	
+
+	a,
+	a:visited
+		text-decoration: underline
+	
+
+	a[href]:after
+		content: " (" attr(href) ")"
+	
+
+	abbr[title]:after
+		content: " (" attr(title) ")"
+	
+	// 
+	// Don't show links that are fragment identifiers,
+	// or use the `javascript:` pseudo protocol
+	
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after
+		content: ""
+	
+	pre,
+	blockquote
+		border: 1px solid #999
+		page-break-inside: avoid
+	
+
+	thead
+		display: table-header-group // h5bp.com/t
+	
+
+	tr,
+	img
+		page-break-inside: avoid
+	
+
+	img
+		max-width: 100% !important
+	
+
+	p,
+	h2,
+	h3
+		orphans: 3
+		widows: 3
+	
+
+	h2,
+	h3
+		page-break-after: avoid
+	
+
+	.l-container
+		margin-left: 0
+	
+	.l-content
+		margin-top: 0
+	
+	.col-print-1,
+	.col-print-2,
+	.col-print-3,
+	.col-print-4,
+	.col-print-5,
+	.col-print-6,
+	.col-print-7,
+	.col-print-8,
+	.col-print-9,
+	.col-print-10,
+	.col-print-11
+		float: left
+
+	.col-print-1
+		width: 8.33333%
+
+	.col-print-2
+		width: 16.66667%
+
+	.col-print-3
+		width: 25%
+
+	.col-print-4
+		width: 33.33333%
+
+	.col-print-5
+		width: 41.66667%
+
+	.col-print-6
+		width: 50%
+
+	.col-print-7
+		width: 58.33333%
+
+	.col-print-8
+		width: 66.66667%
+
+	.col-print-9
+		width: 75%
+
+	.col-print-10
+		width: 83.33333%
+
+	.col-print-11
+		width: 91.66667%
+
+	.col-print-12
+		width: 100%

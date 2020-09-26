@@ -1,0 +1,49 @@
+// nav
+// --------------------------------------------------
+
+.nav
+
+	&_item
+		float: left
+		min-width: 50px
+		text-align: center
+
+		&--user
+			width: auto
+
+			.user_avatar
+				width: 20px
+				margin-top: -3px
+	
+	&_link
+		display: block
+		position: relative
+		font-size: 20px
+		color: $text-color
+		transition: all .3s ease-in-out
+
+		&:hover,
+		&:focus
+			background-color: #f9f9f9
+			color: $text-color
+
+		&--comments
+			font-size: 24px
+		
+		&--feedback
+			// font-size: 20px
+		
+		.count
+			position: absolute
+			bottom: 10px
+			right: 10px
+			font-size: 9px
+			font-weight: normal
+			background-color: $accent-danger
+			color: #fff
+			line-height: 1em
+			padding: 2px 4px
+			border-radius: 10px
+
+		.glyphicon
+			top: 2px

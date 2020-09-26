@@ -1,0 +1,28 @@
+// admin-panel
+// --------------------------------------------------
+
+.admin-panel
+	// padding: 0 6px 0 0
+	background-color: rgba(0, 0, 0, .6)
+	overflow-x: hidden
+	+media-md(display, none)
+	
+	&_list
+		margin-bottom: 0
+
+	&_item
+		display: inline-block
+
+	&_link,
+	&_link:focus,
+	&_link:hover
+		display: block
+		padding: 10px
+		color: #fff
+		font-size: 12px
+		text-decoration: none
+	
+	&-wrap
+		display: flex
+		justify-content: space-between
+		padding: 0 20px

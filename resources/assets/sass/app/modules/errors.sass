@@ -1,0 +1,77 @@
+// 
+// @author SillexLab (sillexlab@gmail.com)
+// @copyright 2020
+// 
+// errors styles
+
+@import "../vars"
+@import "../mixins"
+@import "../../grid"
+@import "../base"
+@import "../bootstrap_custom.sass"
+
+.page-error
+	position: fixed
+	width: 100%
+	height: 100%
+	padding: 60px 10px
+	background-color: #3f4e62
+	overflow: auto
+	display: flex
+	justify-content: center
+	// align-items: center
+
+.error
+	width: 600px
+	margin-top: 40px
+	text-align: center
+	color: #616f77
+
+	&_header
+		padding: 15px
+
+	&_body
+		padding: 15px
+		background-color: #fff
+
+		h2
+			margin-top: 20px
+			margin-bottom: 10px
+			font-size: 30px
+			color: #16a085
+
+		h4
+			margin-top: 40px
+			margin-bottom: 0
+			font-size: 18px
+
+	&_footer
+		background-color: #495a72
+		padding: 15px
+		text-align: center
+	
+	.btn
+		display: inline-block
+		margin-bottom: 0
+		height: auto
+		font-weight: 400
+		text-align: center
+		white-space: nowrap
+		vertical-align: middle
+		touch-action: manipulation
+		cursor: pointer
+		user-select: none
+		//background-image: none
+		border: 1px solid #138a72
+		padding: 5px 10px
+		font-size: 12px
+		line-height: 1.5
+		outline: 0
+		background-color: #16a085
+		color: white
+		text-decoration: none
+
+		&:hover
+			background-color: #138a72
+			border-color: #107863
+			color: white

@@ -1,0 +1,144 @@
+//
+// @author SillexLab (sillexlab@gmail.com)
+// @copyright 2020
+// 
+// responsive styles
+
+
+// ==========================================================================
+// Desktop First Method
+// =========================================================================
+
+// Large Devices, Wide Screens
+// --------------------------------------------------
+@media screen and (max-width : $screen-desktop)
+
+	// .primary
+
+
+// Medium Devices, Desktops
+// --------------------------------------------------
+@media screen and (max-width : $screen-tablet)
+
+	// .primary
+
+
+// Small Devices, Tablets
+// --------------------------------------------------
+@media screen and (max-width : $screen-tablet-min)
+
+	// .primary
+
+
+// Extra Small Devices, Phones
+// --------------------------------------------------
+@media screen and (max-width : $screen-phone)
+
+	// .primary
+
+
+// Custom, iPhone Retina
+// --------------------------------------------------
+// @media screen and (max-width : 320px)
+
+	// .primary
+
+
+// ==========================================================================
+// Mobile First Method
+// =========================================================================
+
+// Custom, iPhone Retina
+// --------------------------------------------------
+// @media screen and (min-width : 320px)
+
+
+// Extra Small Devices, Phones
+// --------------------------------------------------
+// @media screen and (min-width : 480px)
+
+
+// Small Devices, Tablets
+// --------------------------------------------------
+// @media screen and (min-width : 768px)
+
+
+// Medium Devices, Desktops
+// --------------------------------------------------
+// @media screen and (min-width : 992px)
+
+
+// Medium Devices, Desktops
+// --------------------------------------------------
+// @media screen and (min-width : 1024px)
+
+
+// Large Devices, Wide Screens 
+// --------------------------------------------------
+// @media screen and (min-width : 1200px)
+
+
+// @media print,
+// (-o-min-device-pixel-ratio: 5/4),
+// (-webkit-min-device-pixel-ratio: 1.25),
+// (min-resolution: 120dpi)
+// --------------------------------------------------
+// Style adjustments for high resolution devices
+
+
+// ==========================================================================
+// Print styles.
+// Inlined to avoid the additional HTTP request: h5bp.com/r
+// =========================================================================
+
+@media print
+
+	*
+		background: transparent !important
+		color: #000 !important // Black prints faster: h5bp.com/s
+		box-shadow: none !important
+		text-shadow: none !important
+
+	a,
+	a:visited
+		text-decoration: underline
+
+	a[href]:after
+		content: " (" attr(href) ")"
+	
+
+	abbr[title]:after
+		content: " (" attr(title) ")"
+
+	//
+	// Don't show links that are fragment identifiers,
+	// or use the `javascript:` pseudo protocol
+	
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after
+		content: ""
+	
+	pre,
+	blockquote
+		border: 1px solid #999
+		page-break-inside: avoid
+	
+	thead
+		display: table-header-group // h5bp.com/t
+	
+	tr,
+	img
+		page-break-inside: avoid
+	
+	img
+		max-width: 100% !important
+	
+	p,
+	h2,
+	h3
+		orphans: 3
+		widows: 3
+
+	h2,
+	h3
+		page-break-after: avoid

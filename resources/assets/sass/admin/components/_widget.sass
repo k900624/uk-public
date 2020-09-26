@@ -1,0 +1,44 @@
+// widget
+// --------------------------------------------------
+
+.widget
+	margin-bottom: 30px
+	background-color: #fff
+	box-shadow: 0 2px 4px rgba(0,0,0,.1)
+	
+	&_body
+		padding: 20px
+
+		&:before,
+		&:after
+			content: " "
+			display: table
+		&:after
+			clear: both
+
+		.h4, .h5, .h6, h4, h5, h6
+			margin-top: 0
+			margin-bottom: 10px
+
+		.display-1,
+		.display-2,
+		.display-3,
+		.display-4
+			text-align: center
+
+	&_link,
+	&_link:hover,
+	&_link:focus
+		display: block
+		color: #666
+		text-decoration: none
+	
+	&_footer
+		padding: 16px 20px
+		border-top: 1px solid rgba(162,162,162, .12)
+		
+	&-top-bg
+		padding-bottom: 0.25rem!important
+	
+	&-border-left
+		border-left: 4px solid

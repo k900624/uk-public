@@ -1,0 +1,129 @@
+//
+// @author SillexLab (sillexlab@gmail.com)
+// @copyright 2020
+// 
+// mixins
+
+
+// Reset
+// --------------------------------------------------
+=reset()
+	body,div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,input,textarea,p,blockquote,th,td
+		margin: 0
+		padding: 0
+	
+	table
+		border-collapse: collapse
+		border-spacing: 0
+	
+	fieldset,img,abbr
+		border: 0
+	
+	address,caption,cite,code,dfn,em,strong,th,var
+		font-style: normal
+		font-weight: normal
+	
+	ul li
+		list-style: none
+	
+	caption,th
+		text-align: left
+	
+	h1,h2,h3,h4,h5,h6
+		font-size: 100%
+		font-weight: normal
+	
+	sup
+		vertical-align: text-top
+	
+	sub
+		vertical-align: text-bottom
+	
+	input,textarea,select
+		font-family: inherit
+		font-size: inherit
+		font-weight: inherit
+	
+	legend
+		color: #000
+	
+	article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main
+		display: block
+	
+	img
+		max-width: 100%
+		height: auto
+
+
+// Clearfix
+// --------------------------------------------------
+=clearfix()
+
+	&:before,
+	&:after
+		content: ""
+		display: table
+
+	&:after
+		clear: both
+
+
+// Position
+// --------------------------------------------------
+=absolute-center()
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+
+// Text-overflow
+// --------------------------------------------------
+=text-overflow()
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+
+
+// Center-align a block level element
+// --------------------------------------------------
+=center-block()
+	display: block
+	margin-left: auto
+	margin-right: auto
+
+
+// Font Size
+// --------------------------------------------------
+=font-size($sizeValue: 12 )
+	font-size: $sizeValue + px //fallback for old browsers
+	font-size: ($sizeValue / 16) + rem
+
+
+// Cross browser inline block
+// --------------------------------------------------
+=inline-block() 
+	display: -moz-inline-stack
+	display: inline-block
+	vertical-align: top
+	zoom: 1
+	*display: inline
+
+
+// Line Height
+// --------------------------------------------------
+=line-height($heightValue: 12 )
+	line-height: $heightValue + px //fallback for old browsers
+	line-height: (0.125 * $heightValue) + rem
+
+
+// Gradients
+// --------------------------------------------------
+=linear-gradient($start: white, $end: #cccccc, $direction: top)
+	background-color: $start
+	background-image: linear-gradient(to $direction, $start, $end)
+
+=radial-gradient($r1: 0, $r2: 200, $start: white, $end: #cccccc, $m1: 0%, $m2: 100%)
+	background: $end
+	background: -moz-radial-gradient(center 45deg, circle closest-side, $start $m1, $end $m2)
+	background: -webkit-gradient(radial, center center, $r1, center center, $r2, from($start), to($end))

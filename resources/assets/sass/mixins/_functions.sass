@@ -1,0 +1,29 @@
+//
+// @author SillexLab (sillexlab@gmail.com)
+// @copyright 2020
+// 
+// mixins
+
+// path
+// --------------------------------------------------
+$assets-path:	"../../../" !default
+
+// rem
+@function rem($pixels, $context: $global-font-size)
+	@if (unitless($pixels))
+		$pixels: $pixels * 1px
+	@if (unitless($context))
+		$context: $context * 1px
+	@return $pixels / $context * 1rem
+
+// asset
+@function asset($type, $file)
+	@return url($assets-path + $type + $file)
+
+// image
+@function image($file)
+	@return asset('images/', $file)
+
+// font
+@function font($file)
+	@return asset('fonts/', $file)

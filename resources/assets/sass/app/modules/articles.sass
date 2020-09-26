@@ -1,0 +1,137 @@
+// 
+//  @author SillexLab (sillexlab@gmail.com)
+//  @copyright 2020
+//  
+//  articles styles
+
+@import "../vars"
+@import "../mixins"
+@import "../../grid"
+
+
+// article
+// --------------------------------------------------
+.article
+
+	//&-list
+
+	&_meta
+		display: flex
+		padding-left: 0
+		padding-bottom: 10px
+		margin-bottom: 20px
+		border-bottom: 1px solid #eee
+		
+		>li
+			margin-left: 10px
+			color: #999
+			font-size: 11px
+			
+			&:first-child
+				margin-left: 0
+			&:after
+				padding-left: 10px
+				content: '|'
+			
+			&:last-child:after
+				padding-left: 0
+				content: ''
+			
+	&_meta--list-item
+		padding-bottom: 0
+		margin-bottom: 10px
+		border-bottom: none
+	
+	&_media
+		max-width: 600px
+		margin-bottom: 20px
+		text-align: center
+
+	&_img
+		//max-height: 400px
+	
+	&_intro
+		margin-left: 20px
+		margin-bottom: 20px
+		color: #888
+	
+	//&_fulltext
+
+	&_divider
+		box-sizing: content-box
+		height: 0
+		margin: 20px 0
+		border: 0
+		border-top: 1px solid #e5e5e5
+	
+	&--list-item
+		border-bottom: 1px solid #eee
+		margin-bottom: 20px
+		margin-top: 0
+		padding-bottom: 20px
+		overflow: hidden
+		zoom: 1
+		
+		&:last-child
+			border-bottom: none
+			margin-bottom: 0
+			padding-bottom: 0
+		
+		//.item_body
+		
+		.item_header
+			margin-bottom: 3.5px
+			margin-top: 0
+			
+		.item_intro
+			display: flex
+			justify-content: space-between
+			margin-bottom: 0
+		
+		.item_media
+			width: 100px
+			margin-right: 14px
+
+		.item_more
+			align-self: flex-end
+			margin-left: 28px
+
+
+// comments
+// --------------------------------------------------
+.comments
+	margin: 0
+	
+	//&_header
+	&_item
+		margin-bottom: 15px
+	
+	&_list
+		padding: 0
+		margin-bottom: 20px
+		list-style: none
+		
+		.comment
+			
+			&_header
+				padding: 10px
+				border-top: 1px solid #e5e5e5
+			&_avatar
+				margin-right: 15px
+				float: left
+			&_title
+				margin: 5px 0 0 0
+				line-height: 22px
+				font-size: 16px
+			&_meta
+				margin: 2px 0 0 0
+				line-height: 16px
+				font-size: 11px
+				color: #999
+			&_body
+				padding-left: 75px
+
+.comment
+
+	&_add-form
+		margin-top: 40px

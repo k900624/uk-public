@@ -1,0 +1,34 @@
+// cookiealert
+// --------------------------------------------------
+
+.cookiealert
+	position: fixed
+	bottom: 0
+	left: 0
+	width: 100%
+	margin: 0 !important
+	padding: .75rem 1.25rem
+	z-index: 999
+	opacity: 0
+	border-radius: 0
+	background-color: #212327
+	transform: translateY(100%)
+	transition: all 500ms ease-out
+	color: #ecf0f1
+	text-align: center
+
+	&.show
+		opacity: 1
+		transform: translateY(0%)
+		transition-delay: 1000ms
+
+	a
+		color: #ecf0f1
+		text-decoration: underline
+
+	.acceptcookies
+		margin-left: 10px
+		vertical-align: baseline
+
+	+media-print
+		display: none

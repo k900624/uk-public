@@ -1,0 +1,256 @@
+// block
+// --------------------------------------------------
+
+.block
+	position: relative
+	margin-bottom: 30px
+	padding: 15px
+	background-color: #fff
+	box-shadow: 0 2px 4px rgba(0,0,0,.1)
+
+	&_header
+		margin-bottom: 15px
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		h2,
+		h3,
+		h4,
+		h5
+			margin: 0
+			// margin-right: 100px
+			line-height: 24px
+			font-size: 15px
+			display: flex
+			flex-wrap: wrap
+			align-items: center
+
+			small
+				font-size: 12px
+				color: #999
+				margin-left: 5px
+				margin-top: 2px
+
+			.fa
+				margin-right: 5px
+		
+		.label,
+		.badge
+			margin-left: 10px
+		
+		.action
+			position: relative
+			// position: absolute
+			// top: 0
+			// right: 0
+		
+		.block-controls
+			position: absolute
+			top: 0
+			right: 0
+			z-index: 1
+			font-size: 12px
+			word-spacing: 1px
+			white-space: nowrap
+
+			> a,
+			> span
+				padding: 1px 4px
+				border-radius: 4px
+				color: #a6a6a6
+				transition: color 0.15s ease-in-out
+
+				&:hover
+					color: #737373
+				
+				.glyphicon
+					vertical-align: -1px
+
+	&_body
+		// clearfix
+		&:before,
+		&:after
+			content: " "
+			display: table
+		&:after
+			clear: both
+		
+		.list-group
+			margin-bottom: 0
+
+		.list-group ~ .btn
+			margin-top: 20px
+
+		.table
+			margin-bottom: 0
+			
+			//fix dataTable border
+			&.dataTable
+
+				&.table-bordered>thead>tr>td,
+				&.table-bordered>thead>tr>th
+					border-bottom-width: 1px !important
+
+		.list-group-item
+			position: relative
+
+			&--static
+				height: 80px
+
+			&--articles
+
+				.list-group-item-heading
+
+					a
+						display: block
+						overflow: hidden
+						text-overflow: ellipsis
+						white-space: nowrap
+
+			&-img
+				float: left
+				width: 45px
+				height: 45px
+				margin-right: 6px
+				text-align: center
+				
+				img
+					max-height: 100%
+
+			&-text
+				display: block
+				overflow: hidden
+				text-overflow: ellipsis
+				white-space: nowrap
+				margin-bottom: 5px
+
+			&-icons
+				position: absolute
+				bottom: 6px
+				left: 15px
+				right: 15px
+
+				&-item
+					margin-right: 10px
+					color: #777
+
+					&:last-child
+						margin-right: 0
+
+					&--disabled
+						color: $grey-lighten-2
+
+				a.list-group-item-icons-item
+					margin-right: 15px
+					color: #777
+
+					&:hover
+						color: #444
+
+	&_footer
+		margin-top: 15px
+		padding: 15px 0 0
+		border-top: 1px solid #ddd
+
+	&_sidebar
+		min-height: 20px
+		padding: 15px
+		background-color: #f5f5f5
+
+		h6
+			line-height: 20px
+			color: #444
+			text-transform: uppercase
+			font-size: 11px
+
+		hr
+			margin: 15px 0
+			border: 0
+			border-top: 1px solid #e0e0e0
+			border-bottom: 1px solid #fff
+
+	&--help
+		background-color: #b5d8f2
+
+	&--scroll
+		overflow: hidden
+		
+		.block_body
+			height: 300px
+			
+	&--full
+		padding: 0
+		
+		.block_header
+			padding: 15px 15px 0
+
+		.block_footer
+			padding: 10px
+
+		//.action
+			// top: 15px
+			// right: 15px
+
+	&--sidebar
+	
+		.list-group
+
+			&-item
+				border: none
+				border-left: 3px solid transparent
+				margin-bottom: 0
+
+				&.active,
+				&.active:focus,
+				&.active:hover
+					z-index: 2
+					color: inherit
+					background-color: #fff
+					border-color: $accent-primary
+
+			li 
+				position: relative
+				
+				&:hover
+
+					.list-group-item_actions
+						opacity: 1
+						transition: opacity .4s .1s ease
+					
+			.list-group-item_actions
+				position: absolute
+				top: 10px
+				right: 5px
+				z-index: 3
+				display: inline-block
+				opacity: 0
+
+			.btn
+				padding: 0 3px
+	
+	&--info
+		background-color: $info-lighten-3
+
+		a, a:hover
+			color: $accent-info
+
+	&--danger
+		background-color: $danger-lighten-3
+
+		a, a:hover
+			color: $accent-danger
+
+	&--success
+		background-color: $success-lighten-3
+
+		a, a:hover
+			color: $accent-success
+
+	&--warning
+		background-color: $warning-lighten-5
+
+		a, a:hover
+			color: $accent-warning
+
